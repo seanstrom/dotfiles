@@ -1,0 +1,138 @@
+#!/usr/bin/env sh
+
+# Handle errors with an immediate exit and trap statements
+# https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+
+set -Eeuo pipefail
+
+
+# Install YQ for reading YAML files
+# https://mikefarah.github.io/yq
+
+install_yq() {
+  local yq_exists=$(which yq)
+
+  if [ -z $yq_exists ]; then
+    brew install yq
+  else
+    echo "yq installed"
+  fi
+}
+
+
+# Install Stow for dotfile linking
+# https://alexpearce.me/2016/02/managing-dotfiles-with-stow/
+
+install_stow() {
+  local stow_exists=$(which stow)
+
+  if [ -z $stow_exists ]; then
+    brew install stow
+  else
+    echo "stow installed"
+  fi
+}
+
+
+# Detect platform for dotfiles
+#
+# uname is used to retrieve the operating system name or kernel name
+# https://en.wikipedia.org/wiki/Uname
+# https://github.com/MikeMcQuaid/dotfiles/blob/master/script/setup
+
+detect_platform() {
+  local operating_system=$(uname -s)
+  local platform='unknown'
+
+  if [ $operating_system = 'Darwin' ]; then
+    platform='mac'
+  fi
+
+  if [ $operating_system = 'Linux' ]; then
+    platform='linux'
+  fi
+
+  echo $platform
+}
+
+
+# Read YAML array from config
+#
+# yq is used for reading YAML values
+# https://mikefarah.github.io/yq/read/
+#
+# printf is used for preserving newlines for each line
+# https://stackoverflow.com/a/8467449/2444160
+#
+# cut is used for removing YAML array index markers "-"
+# https://stackoverflow.com/a/3795522/2444160
+
+read_yaml_array() {
+  local config_path=$1
+  local config_array_key=$2
+  local yaml_array=$(yq r $config_path $config_array_key)
+
+  printf "%s" "${yaml_array}" | cut -c 3-
+}
+
+
+# Read dotfiles packages for platform from YAML config
+
+read_dotfiles_packages() {
+  local config_path=$1
+  local platform=$(detect_platform)
+  local config_packages_key="packages.${platform}"
+  local dotfiles_packages=$(read_yaml_array $config_path $config_packages_key)
+
+  echo $dotfiles_packages
+}
+
+
+# Link dotfiles package with Stow
+# https://www.gnu.org/software/stow/manual/html_node/Invoking-Stow.html#Invoking-Stow
+
+link_dotfiles_package() {
+  local dotfiles_source_dir=$1
+  local dotfiles_target_dir=$2
+  local dotfiles_package=$3
+
+  stow --dir=$dotfiles_source_dir --target=$dotfiles_target_dir $dotfiles_package
+}
+
+link_dotfiles_packages() {
+  local dotfiles_source_dir=$1
+  local dotfiles_target_dir=$2
+  local dotfiles_packages=${@:3}
+
+  for dotfiles_package in $dotfiles_packages
+  do
+    link_dotfiles_package $dotfiles_source_dir $dotfiles_target_dir $dotfiles_package
+  done
+}
+
+
+# Setup dotfiles
+
+setup_dependencies() {
+  install_stow
+  install_yq
+}
+
+setup_dotfiles() {
+  local dotfiles_source_dir=$1
+  local dotfiles_target_dir=$2
+  local dotfiles_config_path="${dotfiles_source_dir}/packages.yml"
+  local dotfiles_packages=$(read_dotfiles_packages $dotfiles_config_path)
+
+  link_dotfiles_packages dotfiles_source_dir dotfiles_target_dir dotfiles_packages
+}
+
+setup() {
+  setup_dependencies
+  setup_dotfiles ~/.dotfiles $HOME
+}
+
+
+# Main
+
+setup
