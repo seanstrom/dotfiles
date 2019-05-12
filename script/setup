@@ -124,7 +124,7 @@ setup_dotfiles() {
   local dotfiles_config_path="${dotfiles_source_dir}/packages.yml"
   local dotfiles_packages=$(read_dotfiles_packages $dotfiles_config_path)
 
-  link_dotfiles_packages dotfiles_source_dir dotfiles_target_dir dotfiles_packages
+  link_dotfiles_packages $dotfiles_source_dir $dotfiles_target_dir $dotfiles_packages
 }
 
 setup() {
