@@ -1,4 +1,5 @@
 packages:
   mac:
     - homebrew
+    - git
     - node
