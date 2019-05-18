@@ -1,0 +1,32 @@
+# Notes
+# Refer to config documentation here: https://git-scm.com/docs/git-config
+# Or Getting Started here: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+[core]
+    editor = nvim
+    commitGraph = true
+    excludesFile = ~/.config/git/ignore
+    attributesFile = ~/.config/git/attributes
+[commit]
+    template = ~/.config/git/commit-message-template
+[push]
+    default = simple
+[pull]
+    rebase = true
+[fetch]
+	prune = true
+[rebase]
+    autoStash = true
+    autoSquash = true
+[rerere]
+    enabled = true
+[apply]
+    whitespace = fix
+[color]
+    ui = auto
+[tag]
+    # Sort tags by newest first
+    sort = -version:refname
+[help]
+    # Wait 2 seconds before correcting mistyped command
+    autocorrect = 20
