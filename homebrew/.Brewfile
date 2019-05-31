@@ -141,8 +141,6 @@ cask "insomnia"
 cask "nordvpn"
 # mas "NordVPN IKE", id: 1116599239
 
-## Ad Blocker for Safari
-mas "1Blocker", id: 1107421413
 
 
 # Terminal
