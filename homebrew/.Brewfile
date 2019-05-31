@@ -308,6 +308,9 @@ cask "bartender"
 ## Keyboard customizatons
 cask "karabiner-elements"
 
+## Mouse and Trackpad
+cask "middleclick"
+
 ## Keep computer from falling asleep
 cask "keepingyouawake"
 
