@@ -4,6 +4,7 @@
 # App Store or Homebrew, the App Store will likely receive updates sooner.
 
 
+
 # Kegs
 
 tap "homebrew/bundle"
@@ -15,10 +16,12 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 
 
+
 # App Stores
 
 ## MacOS App Store
 brew "mas"
+
 
 
 # Core Languages
@@ -26,6 +29,7 @@ brew "mas"
 brew "python"
 brew "ruby"
 brew "node"
+
 
 
 # Core CLI
@@ -106,6 +110,7 @@ mas "iA Writer", id: 775737590
 ## Notes and Summaries of potential work
 cask "agenda"
 # mas "Agenda.", id: 1287445660 
+
 
 
 # Containers
@@ -238,6 +243,7 @@ cask "folx"
 
 ## Torrent Client with Streaming
 cask "webtorrent"
+
 
 
 # Databases
