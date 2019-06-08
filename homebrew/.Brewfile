@@ -302,6 +302,9 @@ cask "steam"
 
 # Utilities
 
+## Manages launchctl services
+cask "lunchy"
+
 ## Turn off notifications when screen sharing
 cask "muzzle"
 
