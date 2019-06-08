@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+if [ "$SHELL" != "/usr/local/bin/fish" ]
+then
+  chsh -s /usr/local/bin/fish seanstrom
+fi
