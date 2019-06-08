@@ -33,6 +33,9 @@ brew "node"
 ## Reads lines from stdin
 brew "readline"
 
+## Fuzzy Finder
+brew "fzf"
+
 ## Links dotfiles
 brew "stow"
 
