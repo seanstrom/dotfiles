@@ -157,6 +157,8 @@ brew "fish"
 
 ## Terminal Sessions
 brew "tmux"
+brew "hivemind"
+brew "overmind"
 
 ## Combines terminal and system clipboard
 brew "reattach-to-user-namespace"
