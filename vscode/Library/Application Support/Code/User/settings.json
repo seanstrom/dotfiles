@@ -1,0 +1,24 @@
+{
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "materialTheme.fixIconsRunning": false,
+    "editor.fontFamily": "Iosevka, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontWeight": "300",
+    "editor.rulers": [80,120],
+    "window.zoomLevel": 0,
+    "search.location": "panel",
+    "workbench.sideBar.location": "left",
+    "editor.fontSize": 14,
+    "prettier.eslintIntegration": true,
+    "jshint.enable": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.alwaysShowStatus": true,
+    "files.associations": {
+        "fishfile": "ruby"
+    }
+}
