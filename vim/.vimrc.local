@@ -1,0 +1,7 @@
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+set clipboard=unnamedplus
+
+" Git commit message settings
+autocmd Filetype gitcommit setlocal spell textwidth=72

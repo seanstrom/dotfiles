@@ -1,0 +1,8 @@
+Plug 'raichoo/haskell-vim'
+Plug 'chriskempson/base16-vim'
+Plug 'raichoo/purescript-vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'othree/yajs.vim'
+Plug 'drjova/airline-drjova'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
