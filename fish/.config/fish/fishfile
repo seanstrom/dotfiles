@@ -27,6 +27,9 @@ oh-my-fish/plugin-direnv
 # Package Managers
 oh-my-fish/plugin-brew
 
+# Direnv Support
+jethrokuan/fish-direnv
+
 # Linux
 # oh-my-fish/plugin-linuxbrew
 # oh-my-fish/plugin-pbcopy
