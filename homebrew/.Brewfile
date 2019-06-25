@@ -55,6 +55,9 @@ brew "yq"
 ## Parses JSON
 brew "jq"
 
+## Switches envrionment variables based on directory
+brew "direnv"
+
 
 
 # Fonts
