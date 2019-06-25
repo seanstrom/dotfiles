@@ -408,6 +408,7 @@ cask "alfred"
 
 
 # Custom Cask - TODO: Create custom cask
+# https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
 # cask "yousician"
 # cask "invision-studio"
 # cask "webcatalog"
