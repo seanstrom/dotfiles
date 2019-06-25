@@ -149,6 +149,9 @@ cask "insomnia"
 cask "nordvpn"
 # mas "NordVPN IKE", id: 1116599239
 
+## FTP Client
+cask "yummy-ftp"
+
 
 
 # Terminal
