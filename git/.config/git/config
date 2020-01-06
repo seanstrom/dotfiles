@@ -30,3 +30,6 @@
 [help]
     # Wait 2 seconds before correcting mistyped command
     autocorrect = 20
+[user]
+	name = Sean Hagstrom
+	email = sean@usejournal.com
