@@ -80,13 +80,13 @@ cask "fork"
 # Reading
 
 ## Ebook Reader
-cask "kindle"
+# cask "kindle"
 
 ## RSS Reader
-cask "winds"
+# cask "winds"
 
 ## Ebook Reader and DRM breaker
-cask "calibre"
+# cask "calibre"
 
 ## Programming Documentation for Libraries
 cask "dash"
@@ -102,16 +102,16 @@ brew "alexjs"
 brew "write-good"
 
 ## Grades writing for improvements
-cask "grammarly"
+# cask "grammarly"
 
 ## Document Repository and Notebook
 cask "notion"
 
 ## Zenmode writing app
-mas "iA Writer", id: 775737590
+# mas "iA Writer", id: 775737590
 
 ## Notes and Summaries of potential work
-cask "agenda"
+# cask "agenda"
 # mas "Agenda.", id: 1287445660 
 
 
@@ -135,25 +135,25 @@ cask "kitematic"
 brew "wget"
 
 ## Visualizes network traffic
-cask "little-snitch"
+# cask "little-snitch"
 
 ## Camera and Mic Privacy Monitoring
-cask "micro-snitch"
+# cask "micro-snitch"
 
 ## Create mock API servers
 cask "mockoon"
 
 ## HTTP Client
-cask "paw"
+# cask "paw"
 cask "postman"
-cask "insomnia"
+# cask "insomnia"
 
 ## VPN Client
 cask "nordvpn"
 # mas "NordVPN IKE", id: 1116599239
 
 ## FTP Client
-cask "yummy-ftp"
+# cask "yummy-ftp"
 
 
 
@@ -168,8 +168,8 @@ brew "fish"
 
 ## Terminal Sessions
 brew "tmux"
-brew "hivemind"
-brew "overmind"
+# brew "hivemind"
+# brew "overmind"
 
 ## Combines terminal and system clipboard
 brew "reattach-to-user-namespace"
@@ -180,10 +180,10 @@ brew "reattach-to-user-namespace"
 
 brew "vim"
 brew "neovim"
-cask "vimr"
-cask "atom"
+# cask "vimr"
+# cask "atom"
 cask "visual-studio-code"
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 
 # Install Emacs
 # TBD which emacs to install
@@ -197,17 +197,17 @@ mas "Xcode", id: 497799835
 
 cask "firefox"
 cask "google-chrome"
-cask "min"
+# cask "min"
 
 
 
 # App Management
 
 ## Automatically quites apps after idle period
-cask "quitter"
+# cask "quitter"
 
 ## Removes all app artifacts when uninstalling
-cask "appcleaner"
+# cask "appcleaner"
 
 
 
@@ -217,25 +217,25 @@ cask "appcleaner"
 cask "amethyst"
 
 ## Hiding Windows
-cask "hocus-focus"
+# cask "hocus-focus"
 
 
 
 # Virtualization
 
-cask "vagrant"
-cask "vmware-fusion"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
+# cask "vagrant"
+# cask "vmware-fusion"
+# cask "virtualbox"
+# cask "virtualbox-extension-pack"
 
 
 
 # Media Players
 
 ## Video Players
-cask "mpv"
-cask "vlc"
-cask "elmedia-player"
+# cask "mpv"
+# cask "vlc"
+# cask "elmedia-player"
 
 ## Music Players
 cask "spotify"
@@ -245,10 +245,10 @@ cask "spotify"
 # Torrents
 
 ## Torrent Client
-cask "folx"
+# cask "folx"
 
 ## Torrent Client with Streaming
-cask "webtorrent"
+# cask "webtorrent"
 
 
 
@@ -265,26 +265,26 @@ cask "tableplus"
 ## UI
 cask "figma"
 cask "sketch"
-mas "Gravit Designer", id: 1207744923
+# mas "Gravit Designer", id: 1207744923
 
 ## UX
-cask "principle"
+# cask "principle"
 
 ## Sketch Plugin Manager
-cask "craftmanager"
+# cask "craftmanager"
 
 ## Handoff Tools
-cask "zeplin"
-cask "avocode"
+# cask "zeplin"
+# cask "avocode"
 
 
 
 # Messaging
 
 ## Chat
-cask "discord"
-cask "mattermost"
-cask "rocket-chat"
+# cask "discord"
+# cask "mattermost"
+# cask "rocket-chat"
 
 ### apps through cask or mas
 ### mas has auto updates
@@ -292,11 +292,11 @@ cask "rocket-chat"
 cask "slack"
 # mas "Slack", id: 803453959
 
-cask "textual"
+# cask "textual"
 # mas "Textual 7", id: 1262957439
 
 ## Email
-cask "spark"
+# cask "spark"
 # mas "Spark Email", id: 1176895641
 
 
@@ -310,14 +310,14 @@ cask "dropbox"
 
 # Gaming
 
-cask "steam"
+# cask "steam"
 
 
 
 # Utilities
 
 ## Manages launchctl services
-cask "lunchy"
+# cask "lunchy"
 
 ## Turn off notifications when screen sharing
 cask "muzzle"
@@ -343,22 +343,22 @@ cask "mactracker"
 # Audio Production
 
 ## DAW
-cask "ableton-live-suite"
-mas "GarageBand", id: 682658836
+# cask "ableton-live-suite"
+# mas "GarageBand", id: 682658836
 
 ## Audio Interface Controls
-cask "focusrite-control"
+# cask "focusrite-control"
 
 ## Audio Routing
-cask "loopback"
+# cask "loopback"
 
 
 
 # Package Managers
 
 ## Haskell
-brew "cabal-install"
-brew "haskell-stack"
+# brew "cabal-install"
+# brew "haskell-stack"
 
 ## Node
 brew "yarn"
