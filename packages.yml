@@ -3,3 +3,5 @@ packages:
     - homebrew
     - git
     - node
+    - tmux
+    - fish
