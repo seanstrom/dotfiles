@@ -1,36 +1,25 @@
 # Terminal Theme
 rafaelrinaldi/pure
-
 # Mutliple Fish Configs
 oh-my-fish/plugin-local-config
-
 # Colorize shell output
 oh-my-fish/plugin-pj
-
 # Bash Compatibility
 jorgebucaran/fish-bax
-
 # Python Pipenv
 kennethreitz/fish-pipenv
-
 # Node Bin Path Utility
 oh-my-fish/plugin-node-binpath
-
 # Archive Extraction Utility
 oh-my-fish/plugin-extract
-
 # Project Folder Utils
-oh-my-fish/plugin-pj
 oh-my-fish/plugin-jump
 oh-my-fish/plugin-direnv
-
 # Package Managers
 oh-my-fish/plugin-brew
-
 # Direnv Support
 jethrokuan/fish-direnv
-
 # Linux
 # oh-my-fish/plugin-linuxbrew
 # oh-my-fish/plugin-pbcopy
-
+edc/bass
