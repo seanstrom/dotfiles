@@ -4,7 +4,7 @@ if not functions -q fisher
   fish -c fisher
 end
 
-if test -e ~/.vim/autoload/plug.vim
+if not test -e ~/.vim/autoload/plug.vim
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
@@ -13,16 +13,23 @@ if not contains ~/bin $PATH
   set PATH ~/bin $PATH
 end
 
+if not contains ~/.local/bin $PATH
+  set PATH ~/.local/bin $PATH
+end
+
 if not contains ~/.npm-global/bin $PATH
   set PATH ~/.npm-global/bin $PATH
 end
 
-# GHCUP path variable
+if not contains /usr/local/lib/ruby/gems/bin $PATH
+  set PATH /usr/local/lib/ruby/gems/bin $PATH
+end
 
 if not contains ~/.cabal/bin $PATH
   set PATH ~/.cabal/bin $PATH
 end
 
+# GHCUP path variable
 if not contains ~/.ghcup/bin $PATH
   set PATH ~/.ghcup/bin $PATH
 end
@@ -32,4 +39,9 @@ end
 
 # For setting up fnm for detecting project node versions
 # fnm env --multi | source
+
+# For setting up rbenv
+status --is-interactive; and source (rbenv init -|psub)
+
+alias vim="nvim"
 
