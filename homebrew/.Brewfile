@@ -60,6 +60,15 @@ brew "direnv"
 
 
 
+# Ruby Env
+
+## Manage Ruby Versions
+brew "rbenv"
+brew "rbenv-bundler"
+brew "rbenv-default-gems"
+
+
+
 # Fonts
 
 ## Font for code
