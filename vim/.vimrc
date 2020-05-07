@@ -1,10 +1,29 @@
+if has('nvim')
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if has('gui_macvim')
+  set guifont=Iosevka:h16
+  set guicursor+=a:blinkon0
+
+
+  " https://github.com/ayu-theme/ayu-vim
+  " let g:indentLine_char = '|'
+  " let g:indentLine_first_char = '|'
+
+  let g:indentLine_char = '│'
+  let g:indentLine_first_char = '│'
+  let g:indentLine_showFirstIndentLevel = 1
+  let g:indentLine_setColors = 0
+endif
+
 set rtp+=~/.vim/
 set shell=bash
-so ~/.vim/shortcuts.vim
-so ~/.vim/plugins.vim
-so ~/.vim/colorscheme.vim
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+so ~/.vim/plugins.vim
+" so ~/.vim/shortcuts.vim
+" so ~/.vim/colorscheme.vim
+
 
 syntax enable " Enable syntax highlighting
 filetype plugin indent on

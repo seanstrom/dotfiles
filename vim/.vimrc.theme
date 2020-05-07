@@ -1,6 +1,11 @@
-let g:airline_theme = 'solarized'
+" let g:airline_theme = 'solarized'
 " let g:solarized_termcolors = 16
 " let g:solarized_termtrans = 1
-colorscheme solarized
-set bg=dark
+" colorscheme solarized
+" set bg=dark
 " set noshowmode
+
+" Ayu Light Theme
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
