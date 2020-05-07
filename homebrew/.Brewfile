@@ -397,6 +397,8 @@ mas "Things 3", id: 904280696
 ## Mind Mapping
 mas "MindNode 6", id: 1289197285
 
+## App Launcher and Workflows
+cask "alfred"
 
 
 # Custom Cask - TODO: Create custom cask
