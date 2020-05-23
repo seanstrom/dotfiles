@@ -5,3 +5,6 @@ set clipboard=unnamedplus
 
 " Git commit message settings
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+tnoremap <Esc> <C-\><C-n>
+

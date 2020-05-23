@@ -1,5 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jparise/vim-graphql'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'raichoo/haskell-vim'
 Plug 'chriskempson/base16-vim'
@@ -12,5 +18,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'lambdatoast/elm.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()

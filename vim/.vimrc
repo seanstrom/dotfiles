@@ -21,12 +21,16 @@ set rtp+=~/.vim/
 set shell=bash
 
 so ~/.vim/plugins.vim
-" so ~/.vim/shortcuts.vim
+so ~/.vim/shortcuts.vim
 " so ~/.vim/colorscheme.vim
-
 
 syntax enable " Enable syntax highlighting
 filetype plugin indent on
+
+" Mouse Support
+if !has("gui_running")
+  set mouse=a " Add mouse support to console
+endif
 
 
 " General
