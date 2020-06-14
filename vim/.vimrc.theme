@@ -1,22 +1,14 @@
-" let g:airline_theme = 'solarized'
-" let g:solarized_termcolors = 16
-" let g:solarized_termtrans = 1
-" colorscheme solarized
-" set bg=dark
-" set noshowmode
+" background mode
+set background=dark
 
-" Ayu Light Theme
+" 24 bit color support
 set termguicolors
-let ayucolor="dark"
-colorscheme ayu
 
-" colorscheme neodark
- " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-if has('nvim')
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
+" editor theme
+so ~/.vim/colors/gruvbox.vim
 
 " For dark tab color
-hi TabLine      guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
-hi TabLineSel   guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
-hi TabLineFill  guifg=#999 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
+" hi TabLine      guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
+" hi TabLineSel   guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
+" hi TabLineFill  guifg=#999 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
+

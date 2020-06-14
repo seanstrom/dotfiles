@@ -1,22 +1,3 @@
-if has('nvim')
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-
-if has('gui_macvim')
-  set guifont=Iosevka:h16
-  set guicursor+=a:blinkon0
-
-
-  " https://github.com/ayu-theme/ayu-vim
-  " let g:indentLine_char = '|'
-  " let g:indentLine_first_char = '|'
-
-  let g:indentLine_char = '│'
-  let g:indentLine_first_char = '│'
-  let g:indentLine_showFirstIndentLevel = 1
-  let g:indentLine_setColors = 0
-endif
-
 set rtp+=~/.vim/
 set shell=bash
 
@@ -27,16 +8,14 @@ so ~/.vim/shortcuts.vim
 syntax enable " Enable syntax highlighting
 filetype plugin indent on
 
-" Mouse Support
-if !has("gui_running")
-  set mouse=a " Add mouse support to console
-endif
-
+" https://andrew.stwrt.ca/posts/project-specific-vimrc/
+set exrc
+set secure
 
 " General
 set backspace=2       " Make backspace delete
-set clipboard=unnamed " Make vim share clipboard with system
-
+" set clipboard=unnamed " Make vim share clipboard with system
+set clipboard^=unnamed,unnamedplus
 
 " Tab indenting
 set tabstop=2
@@ -91,6 +70,7 @@ set foldlevel=99
 set list
 set listchars=tab:\ »
 
+let g:javascript_plugin_flow = 1
 
 " Theme Settings
 if filereadable(expand('~/.vimrc.theme'))

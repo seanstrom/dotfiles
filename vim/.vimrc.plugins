@@ -1,23 +1,94 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jparise/vim-graphql'
+" language and file types
+Plug 'sheerun/vim-polyglot'
+
+" airline or lightline
+Plug 'itchyny/lightline.vim'
+
+" console
+Plug 'Shougo/deol.nvim'
+
+" project
+Plug 'airblade/vim-rooter'
+
+" movement
+Plug 'rhysd/clever-f.vim'
+Plug 'easymotion/vim-easymotion'
+
+" bling
+Plug 'junegunn/goyo.vim'
+Plug 'mhinz/vim-startify'
+Plug 'Yggdroot/indentLine'
+Plug 'junegunn/limelight.vim'
+
+" tmux
+Plug 'edkolev/tmuxline.vim'
+Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+
+" themes
+Plug 'rakr/vim-one'
+Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
-Plug 'raichoo/haskell-vim'
-Plug 'chriskempson/base16-vim'
-Plug 'raichoo/purescript-vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'othree/yajs.vim'
-Plug 'drjova/airline-drjova'
-Plug 'nanotech/jellybeans.vim'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'lambdatoast/elm.vim'
+Plug 'hzchirs/vim-material'
+Plug 'junegunn/seoul256.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+
+" fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'yuki-ycino/fzf-preview.vim'
+
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+
+" editing
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
-Plug 'Yggdroot/indentLine'
-Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-easy-align'
+Plug 'terryma/vim-expand-region'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+if has('nvim')
+  " file explorer
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+
+  " menus
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+
+  " autocomplete
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/defx.nvim'
+  Plug 'Shougo/denite.nvim'
+  Plug 'Shougo/deoplete.nvim'
+
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" default updatetime 4000ms is not good for async update
+set updatetime=100
+
+let g:deoplete#enable_at_startup = 1
+
+" formatting
+" Plug 'dense-analysis/ale'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 call plug#end()

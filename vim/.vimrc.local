@@ -1,10 +1,9 @@
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
 
-set clipboard=unnamedplus
-
-" Git commit message settings
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
 tnoremap <Esc> <C-\><C-n>
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
