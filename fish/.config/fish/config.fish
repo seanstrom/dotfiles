@@ -34,6 +34,10 @@ if not contains ~/.ghcup/bin $PATH
   set PATH ~/.ghcup/bin $PATH
 end
 
+if not contains ~/Code/org-seanstrom/ponyo/bin $PATH
+  set PATH ~/Code/org-seanstrom/ponyo/bin $PATH
+end
+
 # For silencing the direnv output
 # set -x DIRENV_LOG_FORMAT ""
 
