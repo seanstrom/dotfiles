@@ -51,3 +51,5 @@ alias vim="nvim"
 
 # opam configuration
 source /Users/seanhagstrom/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+starship init fish | source
