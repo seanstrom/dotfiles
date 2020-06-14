@@ -40,6 +40,9 @@ brew "readline"
 ## Fuzzy Finder
 brew "fzf"
 
+## Grep-like
+brew "ripgrep"
+
 ## Links dotfiles
 brew "stow"
 
