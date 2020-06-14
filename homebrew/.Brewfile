@@ -178,6 +178,9 @@ cask "iterm2"
 ## Terminal Shell
 brew "fish"
 
+## Terminal Theme
+brew "starship"
+
 ## Terminal Sessions
 brew "tmux"
 # brew "hivemind"
