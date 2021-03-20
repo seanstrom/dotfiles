@@ -189,6 +189,9 @@ brew "tmux"
 ## Combines terminal and system clipboard
 brew "reattach-to-user-namespace"
 
+## F Sharp Runtime
+# brew "mono"
+cask "dotnet-sdk"
 
 
 # Text Editors and IDEs
