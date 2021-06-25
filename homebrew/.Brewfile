@@ -202,6 +202,7 @@ brew "neovim"
 # cask "atom"
 cask "macvim"
 cask "visual-studio-code"
+cask "sublime-text"
 # mas "Xcode", id: 497799835
 
 # Install Emacs
