@@ -1,5 +1,7 @@
 set rtp+=~/.vim/
+
 set shell=bash
+set shell=$SHELL
 
 so ~/.vim/plugins.vim
 
