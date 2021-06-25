@@ -1,8 +1,14 @@
+[include]
+    path = ~/.config/git/users/git-user-seanstrom
 [includeIf "gitdir:~/Code/org-bysean/"]
-	path = ~/.config/git/users/git-user-bysean
+    path = ~/.config/git/users/git-user-bysean
 [includeIf "gitdir:~/Code/org-seanstrom/"]
-	path = ~/.config/git/users/git-user-seanstrom
+    path = ~/.config/git/users/git-user-seanstrom
 [includeIf "gitdir:~/Code/org-freshtech/"]
-	path = ~/.config/git/users/git-user-freshtech
+    path = ~/.config/git/users/git-user-freshtech
 [includeIf "gitdir:~/Code/org-afwerx/"]
-	path = ~/.config/git/users/git-user-afwerx
+    path = ~/.config/git/users/git-user-afwerx
+[includeIf "gitdir:~/Code/org-journal/"]
+    path = ~/.config/git/users/git-user-journal
+[includeIf "gitdir:~/Code/org-submittable/"]
+    path = ~/.config/git/users/git-user-seanstrom
