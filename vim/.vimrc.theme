@@ -5,7 +5,10 @@ set background=dark
 set termguicolors
 
 " editor theme
-so ~/.vim/colors/gruvbox.vim
+" so ~/.vim/colors/gruvbox.vim
+
+colorscheme palenight
+" colorscheme gruvbox
 
 " For dark tab color
 " hi TabLine      guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
