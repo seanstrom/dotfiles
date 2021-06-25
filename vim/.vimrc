@@ -25,10 +25,6 @@ set softtabstop=2
 set ai " Autoindent
 set si " Smart indent
 
-" Fix indenting problems for coffee and javascript
-au FileType coffee setlocal cindent
-au FileType javascript setlocal nocindent
-
 " Appearance
 set showtabline=2   " Always show tab bar
 set laststatus=2    " Always show the statusline
