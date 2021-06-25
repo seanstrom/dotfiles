@@ -2,8 +2,6 @@ set rtp+=~/.vim/
 set shell=bash
 
 so ~/.vim/plugins.vim
-so ~/.vim/shortcuts.vim
-" so ~/.vim/colorscheme.vim
 
 syntax enable " Enable syntax highlighting
 filetype plugin indent on
