@@ -85,3 +85,13 @@ let g:minimap_auto_start_win_enter = 1
 
 " Hide ~ for end of buffer character
 let &fcs='eob: '
+
+nnoremap <leader>p :GFiles<CR>
+" nnoremap <leader>fi       :Files<CR>
+" nnoremap <leader>C        :Colors<CR>
+nnoremap <leader><CR>     :Buffers<CR>
+" nnoremap <leader>fl       :Lines<CR>
+" nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
+" nnoremap <leader>m        :History<CR>
+
+" luafile("/Users/seanstrom/.config/nvim/lua/init.lua")
