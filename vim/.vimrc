@@ -31,8 +31,8 @@ set laststatus=2    " Always show the statusline
 set ttimeoutlen=50  " Set timeout length
 set number          " Show line numbers
 set title           " Display filename in title bar
-set cursorline      " Adds highlighted line on current line
-set cursorcolumn    " Adds highlighted line on current column
+" set cursorline      " Adds highlighted line on current line
+" set cursorcolumn    " Adds highlighted line on current column
 set scrolloff=5     " set minimum space between the cursor and window
 
 
@@ -78,3 +78,6 @@ endif
 if filereadable(expand('~/.vimrc.local'))
   so ~/.vimrc.local
 endif
+
+" Hide ~ for end of buffer character
+let &fcs='eob: '
