@@ -1,5 +1,10 @@
-if (has('gui_macvim') || has('gui_running'))
+if (has('gvim'))
   set guifont=Iosevka:h16
+endif
+
+
+if (has('gui_macvim') || has('gui_running'))
+  set guifont=Iosevka Term:h16
   set guicursor+=a:blinkon0
 
   " https://github.com/ayu-theme/ayu-vim
