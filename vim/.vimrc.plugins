@@ -43,13 +43,6 @@ Plug 'yuki-ycino/fzf-preview.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-if has('nvim') || has('patch-8.0.902')
-  Plug 'mhinz/vim-signify'
-else
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-endif
 
 " editing
 Plug 'sjl/gundo.vim'
@@ -61,34 +54,16 @@ Plug 'terryma/vim-expand-region'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
-if has('nvim')
-  " file explorer
-  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-
-  " menus
-  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-
-  " autocomplete
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/defx.nvim'
-  Plug 'Shougo/denite.nvim'
-  Plug 'Shougo/deoplete.nvim'
-
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'marko-cerovac/material.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'wfxr/minimap.vim'
 
 " default updatetime 4000ms is not good for async update
 set updatetime=100
 
-let g:deoplete#enable_at_startup = 1
-
 " formatting
-" Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 call plug#end()
