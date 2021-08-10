@@ -7,8 +7,14 @@ set termguicolors
 " editor theme
 " so ~/.vim/colors/gruvbox.vim
 
-colorscheme palenight
+" colorscheme palenight
+" colorscheme material
+lua require('material.functions').change_style("palenight")
 " colorscheme gruvbox
+
+let macvim_skip_colorscheme=1
+let g:material_style = 'palenight'
+
 
 " For dark tab color
 " hi TabLine      guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
