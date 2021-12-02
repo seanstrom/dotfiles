@@ -7,3 +7,5 @@ packages:
     - fish
     - vim
     - nvim
+    - karabiner
+    - vscode
