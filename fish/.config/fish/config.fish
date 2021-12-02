@@ -53,3 +53,5 @@ alias vim="nvim"
 source /Users/seanhagstrom/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 starship init fish | source
+
+source /usr/local/opt/asdf/libexec/asdf.fish
