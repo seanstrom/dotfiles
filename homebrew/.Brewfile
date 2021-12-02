@@ -1,4 +1,4 @@
-# Notes
+
 # When choosing between using `cask` or `mas`
 # Consider whether you'd like update management through the
 # App Store or Homebrew, the App Store will likely receive updates sooner.
@@ -134,10 +134,10 @@ cask "notion"
 brew "docker"
 
 ## Docker GUI
-cask "docker"
+# cask "docker"
 
 ## Docker container management GUI
-cask "kitematic"
+# cask "kitematic"
 
 
 
@@ -153,11 +153,11 @@ brew "wget"
 # cask "micro-snitch"
 
 ## Create mock API servers
-cask "mockoon"
+# cask "mockoon"
 
 ## HTTP Client
 # cask "paw"
-cask "postman"
+# cask "postman"
 # cask "insomnia"
 
 ## VPN Client
@@ -172,7 +172,7 @@ cask "nordvpn"
 # Terminal
 
 ## Terminal Client
-cask "hyper"
+# cask "hyper"
 cask "iterm2"
 
 ## Terminal Shell
@@ -200,7 +200,7 @@ brew "vim"
 brew "neovim"
 # cask "vimr"
 # cask "atom"
-cask "macvim"
+# cask "macvim"
 cask "visual-studio-code"
 cask "sublime-text"
 # mas "Xcode", id: 497799835
@@ -275,8 +275,8 @@ cask "spotify"
 # Databases
 
 ## Database Clients
-cask "postico"
-cask "tableplus"
+# cask "postico"
+# cask "tableplus"
 
 
 
@@ -302,7 +302,7 @@ cask "sketch"
 # Messaging
 
 ## Chat
-# cask "discord"
+cask "discord"
 # cask "mattermost"
 # cask "rocket-chat"
 
@@ -383,11 +383,13 @@ cask "mactracker"
 ## Node
 brew "yarn"
 
+## Manage Language Versions
+brew "asdf"
 
 
 # Password Management
 
-brew "1password-cli"
+# brew "1password-cli"
 cask "1password"
 # mas "1Password 7", id: 1333542190
 
