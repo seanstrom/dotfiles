@@ -1,21 +1,31 @@
+" Environment
 set rtp+=~/.vim/
-
 set shell=bash
 set shell=$SHELL
 
+
+" Load Plugins
 so ~/.vim/plugins.vim
 
-syntax enable " Enable syntax highlighting
+
+" Enable syntax highlighting
+syntax enable
+
+
+" Indentation
 filetype plugin indent on
+
 
 " https://andrew.stwrt.ca/posts/project-specific-vimrc/
 set exrc
 set secure
 
+
 " General
 set backspace=2       " Make backspace delete
 " set clipboard=unnamed " Make vim share clipboard with system
 set clipboard^=unnamed,unnamedplus
+
 
 " Tab indenting
 set tabstop=2
@@ -25,15 +35,16 @@ set softtabstop=2
 set ai " Autoindent
 set si " Smart indent
 
+
 " Appearance
 set showtabline=2   " Always show tab bar
 set laststatus=2    " Always show the statusline
 set ttimeoutlen=50  " Set timeout length
 set number          " Show line numbers
 set title           " Display filename in title bar
+set scrolloff=5     " set minimum space between the cursor and window
 " set cursorline      " Adds highlighted line on current line
 " set cursorcolumn    " Adds highlighted line on current column
-set scrolloff=5     " set minimum space between the cursor and window
 
 
 " Keep temp files out of CWD
@@ -66,7 +77,6 @@ set foldlevel=99
 set list
 set listchars=tab:\ »
 
-let g:javascript_plugin_flow = 1
 
 " Theme Settings
 if filereadable(expand('~/.vimrc.theme'))
@@ -79,19 +89,20 @@ if filereadable(expand('~/.vimrc.local'))
   so ~/.vimrc.local
 endif
 
+
+" Minimap
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+let g:minimap_auto_start_win_enter = 0
+let g:minimap_block_filetypes = ['startify', 'minimap', 'nofile']
+let g:minimap_close_filetypes = ['netrw', 'vim-plug']
+
 
 " Hide ~ for end of buffer character
 let &fcs='eob: '
 
-nnoremap <leader>p :GFiles<CR>
-" nnoremap <leader>fi       :Files<CR>
-" nnoremap <leader>C        :Colors<CR>
-nnoremap <leader><CR>     :Buffers<CR>
-" nnoremap <leader>fl       :Lines<CR>
-" nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
-" nnoremap <leader>m        :History<CR>
 
-" luafile("/Users/seanstrom/.config/nvim/lua/init.lua")
+" Fuzzy Finder FZF
+nnoremap <leader>p :GFiles<CR>
+nnoremap <leader><CR> :Buffers<CR>
+
