@@ -174,6 +174,7 @@ cask "nordvpn"
 ## Terminal Client
 # cask "hyper"
 cask "iterm2"
+cask "kitty"
 
 ## Terminal Shell
 brew "fish"
