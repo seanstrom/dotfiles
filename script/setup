@@ -59,7 +59,7 @@ detect_platform() {
 # Read YAML array from config
 #
 # yq is used for reading YAML values
-# https://mikefarah.github.io/yq/read/
+# https://mikefarah.gitbook.io/yq/operators/traverse-read
 #
 # printf is used for preserving newlines for each line
 # https://stackoverflow.com/a/8467449/2444160
@@ -70,7 +70,7 @@ detect_platform() {
 read_yaml_array() {
   local config_path=$1
   local config_array_key=$2
-  local yaml_array=$(yq r $config_path $config_array_key)
+  local yaml_array=$(yq eval $config_array_key $config_path)
 
   printf "%s" "${yaml_array}" | cut -c 3-
 }
@@ -81,7 +81,7 @@ read_yaml_array() {
 read_dotfiles_packages() {
   local config_path=$1
   local platform=$(detect_platform)
-  local config_packages_key="packages.${platform}"
+  local config_packages_key=".packages.${platform}"
   local dotfiles_packages=$(read_yaml_array $config_path $config_packages_key)
 
   echo $dotfiles_packages
