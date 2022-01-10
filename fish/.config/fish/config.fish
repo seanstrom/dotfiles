@@ -53,4 +53,6 @@ starship init fish | source
 
 any-nix-shell fish | source
 
+direnv hook fish | source
+
 source /usr/local/opt/asdf/libexec/asdf.fish
