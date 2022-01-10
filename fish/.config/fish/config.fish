@@ -41,9 +41,6 @@ end
 # For silencing the direnv output
 # set -x DIRENV_LOG_FORMAT ""
 
-# For setting up fnm for detecting project node versions
-# fnm env --multi | source
-
 # For setting up rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
