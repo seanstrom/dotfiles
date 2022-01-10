@@ -56,3 +56,8 @@ any-nix-shell fish | source
 direnv hook fish | source
 
 source /usr/local/opt/asdf/libexec/asdf.fish
+
+function fish_title
+  echo " "
+end
+
