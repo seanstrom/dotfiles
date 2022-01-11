@@ -37,11 +37,14 @@ set si " Smart indent
 
 
 " Appearance
-set showtabline=2   " Always show tab bar
+" set showtabline=2   " Always show tab bar
+set showtabline=0   " Always hide tab bar
 set laststatus=2    " Always show the statusline
 set ttimeoutlen=50  " Set timeout length
 set number          " Show line numbers
+set nonumber
 set title           " Display filename in title bar
+set notitle
 set scrolloff=5     " set minimum space between the cursor and window
 " set cursorline      " Adds highlighted line on current line
 " set cursorcolumn    " Adds highlighted line on current column
@@ -92,7 +95,7 @@ endif
 
 " Minimap
 let g:minimap_width = 10
-let g:minimap_auto_start = 1
+let g:minimap_auto_start = 0
 let g:minimap_auto_start_win_enter = 0
 let g:minimap_block_filetypes = ['startify', 'minimap', 'nofile']
 let g:minimap_close_filetypes = ['netrw', 'vim-plug']
