@@ -137,7 +137,7 @@ basic.logo = {
 local default = {
     filetypes = { 'default' },
     active = {
-        { ' ', hl_list.Black },
+        -- { ' ', { 'black', 'black' } },
         basic.logo,
         basic.file,
         { vim_components.search_count(), { 'red', 'black_light' } },
@@ -149,7 +149,7 @@ local default = {
         { ' ', hl_list.Black },
         basic.vi_mode,
         basic.right,
-        { ' ', hl_list.Black },
+        -- { ' ', hl_list.Black },
     },
     inactive = {
         -- basic.file_name_inactive,
