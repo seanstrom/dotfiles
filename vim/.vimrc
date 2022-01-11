@@ -126,3 +126,6 @@ let g:aniseed#env = v:true
 " Hide line numbers in terminal mode
 autocmd TermOpen * setlocal nonumber norelativenumber
 
+" Disable indent lines for terminal buffers
+autocmd TermOpen * IndentLinesDisable
+
