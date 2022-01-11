@@ -7,10 +7,10 @@ set termguicolors
 " editor theme
 " so ~/.vim/colors/gruvbox.vim
 
-colorscheme palenight
+" colorscheme palenight
 " colorscheme material
 " lua require('material.functions').change_style("palenight")
-" colorscheme gruvbox
+colorscheme gruvbox
 "
 
 hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
