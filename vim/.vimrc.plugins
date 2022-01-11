@@ -60,6 +60,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'marko-cerovac/material.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'wfxr/minimap.vim'
+Plug 'bakpakin/fennel.vim'
 
 " default updatetime 4000ms is not good for async update
 set updatetime=100
@@ -73,6 +74,7 @@ if has("nvim")
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'windwp/windline.nvim'
   " Plug 'famiu/feline.nvim'
+  Plug 'Olical/aniseed'
 endif
 
 
