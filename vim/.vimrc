@@ -110,4 +110,14 @@ nnoremap <leader>p :GFiles<CR>
 nnoremap <leader><CR> :Buffers<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+" Binding Ctr-s and Cmd-s to save files in normal mode and insert mode
+noremap <D-s> :w<CR>
+map <C-s> <D-s>
+imap <C-s> <ESC><D-s>a
+
+noremap <C-w> :q<CR>
+noremap <leader>q :qa<CR>
+noremap <leader><TAB> :tabn<CR>
+
+
 
