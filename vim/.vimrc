@@ -108,4 +108,6 @@ let &fcs='eob: '
 " Fuzzy Finder FZF
 nnoremap <leader>p :GFiles<CR>
 nnoremap <leader><CR> :Buffers<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
 
