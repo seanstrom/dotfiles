@@ -57,7 +57,10 @@ direnv hook fish | source
 
 source /usr/local/opt/asdf/libexec/asdf.fish
 
-function fish_title
-  echo " "
+# Hide terminal title for Kitty Terminal
+if set -q KITTY_WINDOW_ID
+  function fish_title
+    echo " "
+  end
 end
 
