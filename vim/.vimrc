@@ -123,4 +123,6 @@ noremap <leader><TAB> :tabn<CR>
 " Allow Fennel code to run 
 let g:aniseed#env = v:true
 
+" Hide line numbers in terminal mode
+autocmd TermOpen * setlocal nonumber norelativenumber
 
