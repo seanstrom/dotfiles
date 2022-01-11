@@ -120,4 +120,7 @@ noremap <leader>q :qa<CR>
 noremap <leader><TAB> :tabn<CR>
 
 
+" Allow Fennel code to run 
+let g:aniseed#env = v:true
+
 
