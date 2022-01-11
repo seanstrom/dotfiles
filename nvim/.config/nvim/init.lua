@@ -1,6 +1,4 @@
 vim.cmd('source ~/.config/nvim/vim/init.vim')
-require('status-line')
-
 
 -- local cmd = vim.cmd
 -- local function fg(group, color)
