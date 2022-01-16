@@ -64,3 +64,7 @@ if set -q KITTY_WINDOW_ID
   end
 end
 
+if set -q NVIM_LISTEN_ADDRESS
+  alias v="edit --remote-tab"
+end
+
