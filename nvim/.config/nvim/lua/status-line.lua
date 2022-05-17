@@ -221,8 +221,10 @@ windline.setup({
     },
 })
 
-local x = require('lualine.utils.utils').extract_highlight_colors('Normal', 'bg')
-vim.cmd("hi VertSplit guifg=" .. x)
+local bg_color = require('lualine.utils.utils').extract_highlight_colors('Normal', 'bg')
+vim.cmd("hi VertSplit guifg=" .. bg_color)
+vim.cmd("hi StatusLine gui=NONE guibg=" .. bg_color .. " guifg=" .. bg_color)
+vim.cmd("hi StatusLineNC gui=reverse guibg=" .. bg_color .. " guifg=" .. bg_color)
 
 mod.hide_statusline = function()
    local api = vim.api
