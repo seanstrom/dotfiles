@@ -68,3 +68,5 @@ if set -q NVIM_LISTEN_ADDRESS
   alias v="edit --remote-tab"
 end
 
+set -gx GPG_TTY (tty)
+
