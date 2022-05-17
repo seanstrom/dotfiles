@@ -129,3 +129,5 @@ autocmd TermOpen * setlocal nonumber norelativenumber
 " Disable indent lines for terminal buffers
 autocmd TermOpen * IndentLinesDisable
 
+" enter insert mode whenever we're in a terminal
+autocmd TermOpen,BufWinEnter,BufEnter term://* startinsert
