@@ -32,4 +32,6 @@
     autocorrect = 20
 [include]
     path = ~/.config/git/config-user
+[init]
+    defaultBranch = main
 
