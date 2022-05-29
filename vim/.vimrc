@@ -114,6 +114,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 noremap <D-s> :w<CR>
 map <C-s> <D-s>
 imap <C-s> <ESC><D-s>a
+imap <D-s> <ESC><D-s>a
 
 noremap <C-w> :q<CR>
 noremap <leader>q :qa<CR>
