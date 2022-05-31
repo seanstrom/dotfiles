@@ -12,3 +12,5 @@
     path = ~/.config/git/users/git-user-journal
 [includeIf "gitdir:~/Code/org-submittable/"]
     path = ~/.config/git/users/git-user-seanstrom
+[includeIf "gitdir:~/Games/org-seanstrom/"]
+    path = ~/.config/git/users/git-lfs-user-seanstrom
