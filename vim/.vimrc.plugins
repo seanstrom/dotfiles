@@ -76,6 +76,7 @@ if has("nvim")
   " Plug 'famiu/feline.nvim'
   Plug 'Olical/aniseed'
   Plug 'alaviss/nim.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter'
 endif
 
 
