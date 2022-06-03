@@ -19,5 +19,11 @@
     "eslint.alwaysShowStatus": true,
     "files.associations": {
         "fishfile": "ruby"
-    }
+    },
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false
 }
