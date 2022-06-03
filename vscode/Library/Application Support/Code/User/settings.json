@@ -3,12 +3,12 @@
     "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "materialTheme.fixIconsRunning": false,
     "editor.fontFamily": "Iosevka, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontWeight": "300",
-    "editor.rulers": [80,120],
-    "window.zoomLevel": 0,
-    "search.location": "panel",
+    "editor.fontWeight": "400",
+    "editor.rulers": [
+        80,
+        120
+    ],
     "workbench.sideBar.location": "left",
-    "editor.fontSize": 14,
     "prettier.eslintIntegration": true,
     "jshint.enable": false,
     "[json]": {
