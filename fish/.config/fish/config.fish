@@ -38,6 +38,10 @@ if not contains ~/Code/org-seanstrom/ponyo/bin $PATH
   set PATH ~/Code/org-seanstrom/ponyo/bin $PATH
 end
 
+if not contains ~/.dotnet/tools $PATH
+  set PATH ~/.dotnet/tools $PATH
+end
+
 # For silencing the direnv output
 # set -x DIRENV_LOG_FORMAT ""
 
