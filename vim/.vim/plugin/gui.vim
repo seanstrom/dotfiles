@@ -1,6 +1,6 @@
 set guifont=Iosevka_Nerd_Font_Mono
 
-if (has('gvim'))
+if (has('gvim') || has('gui_macvim') || has('gui_running'))
   set guifont="Iosevka Term:h16"
 endif
 
@@ -12,10 +12,8 @@ if (has("nvim"))
   let g:indentLine_fileTypeExclude = ['startify']
 end
 
-if (has('gui_macvim') || has('gui_running'))
-  set guifont="Iosevka Term:h16"
+if (has('gui_macvim') || has('gui_running') || exists("g:neovide"))
   set guicursor+=a:blinkon0
-
   let g:indentLine_char = '│'
   let g:indentLine_first_char = '│'
   let g:indentLine_showFirstIndentLevel = 1
@@ -29,4 +27,6 @@ if exists("g:neovide")
   map! <D-v> <C-R>+
   tmap <D-v> <C-R>+
   vmap <D-c> "+y<CR> 
+
+  colorscheme habarena
 endif
