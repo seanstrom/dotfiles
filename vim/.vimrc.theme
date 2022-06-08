@@ -1,5 +1,6 @@
 " background mode
 set background=dark
+" set background=light
 
 " 24 bit color support
 set termguicolors
@@ -11,8 +12,7 @@ set termguicolors
 " colorscheme material
 " lua require('material.functions').change_style("palenight")
 colorscheme gruvbox
-"
-
+" colorscheme habarena
 hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
 
 let macvim_skip_colorscheme=1

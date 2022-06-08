@@ -22,6 +22,8 @@ endif
 
 if exists("g:neovide")
   let g:neovide_input_use_logo = 1
+  let g:indentLine_setColors = 1
+  let g:indentLine_color_gui = "#CECECE"
 
   map <D-v> "+p<CR>
   map! <D-v> <C-R>+
