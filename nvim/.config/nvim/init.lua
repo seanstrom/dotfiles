@@ -7,6 +7,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'path' }
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i','c'}),
