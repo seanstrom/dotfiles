@@ -3,6 +3,19 @@ vim.cmd('source ~/.config/nvim/vim/init.vim')
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 local cmp = require 'cmp'
+
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = 'cmdline' }
+  }
+})
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
 cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
