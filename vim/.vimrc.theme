@@ -1,7 +1,3 @@
-" background mode
-set background=dark
-" set background=light
-
 " 24 bit color support
 set termguicolors
 
@@ -11,8 +7,19 @@ set termguicolors
 " colorscheme palenight
 " colorscheme material
 " lua require('material.functions').change_style("palenight")
-colorscheme gruvbox
-" colorscheme habarena
+
+if exists("g:neovide")
+  set background=light
+  colorscheme habarena
+  autocmd BufEnter * set title
+  autocmd BufEnter * call timer_start(1, { tid -> execute('set notitle')})
+endif
+
+if !exists("g:neovide")
+set background=dark
+  colorscheme gruvbox
+endif
+
 hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
 
 let macvim_skip_colorscheme=1

@@ -29,9 +29,4 @@ if exists("g:neovide")
   map! <D-v> <C-R>+
   tmap <D-v> <C-R>+
   vmap <D-c> "+y<CR> 
-
-  colorscheme habarena
-
-  autocmd BufEnter * set title
-  autocmd BufEnter * call timer_start(1, { tid -> execute('set notitle')})
 endif
