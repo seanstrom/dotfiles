@@ -16,11 +16,10 @@ if exists("g:neovide")
 endif
 
 if !exists("g:neovide")
-set background=dark
+  set background=dark
   colorscheme gruvbox
+  hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
 endif
-
-hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
 
 let macvim_skip_colorscheme=1
 let g:material_style = 'palenight'
