@@ -1,5 +1,7 @@
 vim.cmd('source ~/.config/nvim/vim/init.vim')
 
+require('gitsigns').setup()
+
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 local cmp = require 'cmp'
