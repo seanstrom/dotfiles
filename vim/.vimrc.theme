@@ -9,6 +9,7 @@ set termguicolors
 " lua require('material.functions').change_style("palenight")
 
 if exists("g:neovide")
+  colorscheme gruvbox
   set background=light
   colorscheme habarena
   autocmd BufEnter * set title

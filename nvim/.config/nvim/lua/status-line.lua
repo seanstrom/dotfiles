@@ -72,20 +72,21 @@ basic.lsp_diagnos = {
 }
 
 
-local icon_comp = b_components.cache_file_icon({ default = '', hl_colors = {'white','black_light'} })
+local icon_comp = b_components.cache_file_icon({ default = '', hl_colors = {'white_light','black_light'} })
 
 basic.file = {
     hl_colors = {
         default = { 'white', 'black_light' },
+        text = { 'white_light', 'black_light' },
     },
     text = function(bufnr)
         return {
             { ' ', 'default' },
             icon_comp(bufnr),
             { ' ', 'default' },
-            { b_components.cache_file_name('[No Name]', ''), '' },
-            { b_components.file_modified(' '), '' },
-            { b_components.cache_file_size(), '' },
+            { b_components.cache_file_name('[No Name]', ''), 'text' },
+            { b_components.file_modified(' '), 'text' },
+            { b_components.cache_file_size(), 'text' },
         }
     end,
 }
