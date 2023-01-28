@@ -48,7 +48,6 @@ set notitle
 set scrolloff=5     " set minimum space between the cursor and window
 " set cursorline      " Adds highlighted line on current line
 " set cursorcolumn    " Adds highlighted line on current column
-
 set signcolumn=yes
 
 " Keep temp files out of CWD
@@ -119,9 +118,14 @@ map <C-s> <D-s>
 imap <C-s> <ESC><D-s>a
 imap <D-s> <ESC><D-s>a
 
+noremap <leader>ww <C-w>x
 noremap <C-w> :q<CR>
 noremap <leader>q :qa<CR>
 noremap <leader><TAB> :tabn<CR>
+inoremap <a-left> <c-left>
+inoremap <a-right> <c-right>
+inoremap <a-up> <c-up>
+inoremap <a-down> <c-down>
 
 
 " Allow Fennel code to run 
@@ -135,3 +139,7 @@ autocmd TermOpen * IndentLinesDisable
 
 " enter insert mode whenever we're in a terminal
 autocmd TermOpen,BufWinEnter,BufEnter term://* startinsert
+
+au BufRead,BufNewFile *.mpp set filetype=cpp
+
+set cmdheight=1
