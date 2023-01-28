@@ -19,7 +19,10 @@ endif
 if !exists("g:neovide")
   set background=dark
   colorscheme gruvbox
+  colorscheme palenight
+  colorscheme catppuccin-macchiato
   hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
+
 endif
 
 let macvim_skip_colorscheme=1
