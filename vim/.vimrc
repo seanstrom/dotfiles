@@ -1,7 +1,7 @@
 " Environment
 set rtp+=~/.vim/
-set shell=bash
 set shell=$SHELL
+set shell=sh
 
 
 " Load Plugins
