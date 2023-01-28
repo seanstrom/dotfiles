@@ -49,6 +49,7 @@ set scrolloff=5     " set minimum space between the cursor and window
 " set cursorline      " Adds highlighted line on current line
 " set cursorcolumn    " Adds highlighted line on current column
 
+set signcolumn=yes
 
 " Keep temp files out of CWD
 set backupdir=~/.vim/tmp/backup
