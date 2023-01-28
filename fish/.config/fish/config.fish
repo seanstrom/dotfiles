@@ -56,6 +56,7 @@ end
 # For setting up rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
+alias v="nvim"
 alias vim="nvim"
 
 # opam configuration
@@ -76,9 +77,9 @@ if set -q KITTY_WINDOW_ID
   end
 end
 
-if set -q NVIM_LISTEN_ADDRESS
-  alias v="edit --remote-tab"
-end
+# if set -q NVIM_LISTEN_ADDRESS
+#   alias v="edit --remote-tab"
+# end
 
 set -gx GPG_TTY (tty)
 
