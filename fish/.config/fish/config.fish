@@ -42,6 +42,14 @@ if not contains ~/.dotnet/tools $PATH
   set PATH ~/.dotnet/tools $PATH
 end
 
+if not contains ~/.asdf/shims $PATH
+  set PATH ~/.asdf/shims $PATH
+end
+
+if not contains /usr/local/bin $PATH
+  set PATH /usr/local/bin $PATH
+end
+
 # For silencing the direnv output
 # set -x DIRENV_LOG_FORMAT ""
 
