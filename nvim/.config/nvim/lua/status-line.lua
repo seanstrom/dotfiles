@@ -46,8 +46,9 @@ basic.vi_mode = {
     },
     text = function()
         return {
-            { sep.left_rounded, state.mode[2] .. 'Before' },
-            { state.mode[1] .. ' ', state.mode[2] },
+            -- { sep.left_rounded_thin, state.mode[2] .. 'Before' },
+            { sep.left_rounded_thin, {'black_light', 'black_light'} },
+            { ' ' .. state.mode[1] .. ' ', state.mode[2] },
         }
     end,
 }
@@ -72,34 +73,36 @@ basic.lsp_diagnos = {
 }
 
 
-local icon_comp = b_components.cache_file_icon({ default = '', hl_colors = {'white_light','black_light'} })
+local icon_comp = b_components.cache_file_icon({ default = '', hl_colors = {'black_light','white_light'} })
 
 basic.file = {
     hl_colors = {
         default = { 'white', 'black_light' },
-        text = { 'white_light', 'black_light' },
+        text = { 'black', 'white_light' },
     },
     text = function(bufnr)
         return {
-            { ' ', 'default' },
+            -- { ' ', 'default' },
+            { ' ', 'text' },
             icon_comp(bufnr),
-            { ' ', 'default' },
+            { ' ', 'text' },
             { b_components.cache_file_name('[No Name]', ''), 'text' },
-            { b_components.file_modified(' '), 'text' },
+            { b_components.file_modified('  '), 'text' },
             { b_components.cache_file_size(), 'text' },
+            { ' ', 'text' }
         }
     end,
 }
 basic.right = {
     hl_colors = {
         sep_before = { 'black_light', 'white_light' },
-        sep_after = { 'white_light', 'black' },
+        sep_after = { 'black_light', 'black_light' },
         text = { 'black', 'white_light' },
     },
     text = function()
         return {
             { b_components.line_col_lua, 'text' },
-            { sep.right_rounded, 'sep_after' },
+            { sep.right_rounded_thin, 'sep_after' },
         }
     end,
 }
@@ -124,16 +127,29 @@ basic.git = {
 }
 basic.logo = {
     hl_colors = {
-        sep_before = { 'blue', 'black' },
-        default = { 'black', 'blue' },
+        sep_before = { 'black_light', 'black_light'},
+        default = { 'blue', 'black_light' },
     },
     text = function()
         return {
-            { sep.left_rounded, 'sep_before' },
+            { sep.left_rounded_thin, 'sep_before' },
             { ' ', 'default' },
+            { sep.right_rounded_thin, 'sep_before' },
         }
     end,
 }
+
+function search_count()
+  formatter = vim_components.search_count()
+  return function()
+    result = formatter()
+    if result == '' then
+      return ' '
+    else
+      return result
+    end
+  end
+end
 
 local default = {
     filetypes = { 'default' },
@@ -141,13 +157,14 @@ local default = {
         -- { ' ', { 'black', 'black' } },
         basic.logo,
         basic.file,
-        { vim_components.search_count(), { 'red', 'black_light' } },
-        { sep.right_rounded, { 'black_light', 'black' } },
+        { search_count(), { 'red', 'black_light' } },
+        -- { sep.right_rounded_thin, { 'black_light', 'black_light' } },
+        { ' ', { 'black', 'black' } },
         basic.lsp_diagnos,
         basic.git,
         basic.divider,
         { git_comps.git_branch({ icon = '  ' }), { 'green', 'black' }, 90 },
-        { ' ', hl_list.Black },
+        { '  ', hl_list.Black },
         basic.vi_mode,
         basic.right,
         -- { ' ', hl_list.Black },
