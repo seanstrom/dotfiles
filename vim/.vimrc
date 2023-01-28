@@ -17,7 +17,7 @@ filetype plugin indent on
 
 
 " https://andrew.stwrt.ca/posts/project-specific-vimrc/
-set exrc
+" set exrc
 set secure
 
 
