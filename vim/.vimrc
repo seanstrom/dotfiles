@@ -105,11 +105,13 @@ let g:minimap_close_filetypes = ['netrw', 'vim-plug']
 " Hide ~ for end of buffer character
 let &fcs='eob: '
 
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 " Fuzzy Finder FZF
-nnoremap <leader>p :GFiles<CR>
+nnoremap <leader>p :GFiles --cached --others --exclude-standard<CR>
 nnoremap <leader><CR> :Buffers<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>f :Files<CR>
 
 " Binding Ctr-s and Cmd-s to save files in normal mode and insert mode
 noremap <D-s> :w<CR>
