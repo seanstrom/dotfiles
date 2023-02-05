@@ -1,0 +1,10 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+color-modes = false
+true-color = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
