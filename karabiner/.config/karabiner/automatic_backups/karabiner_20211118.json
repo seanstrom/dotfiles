@@ -58,7 +58,7 @@
                                     {
                                         "key_code": "keypad_hyphen",
                                         "modifiers": [
-                                            "left_control"
+                                          "left_control"
                                         ]
                                     }
                                 ],
@@ -78,7 +78,7 @@
                                     {
                                         "key_code": "keypad_plus",
                                         "modifiers": [
-                                            "left_control"
+                                          "left_control"
                                         ]
                                     }
                                 ],

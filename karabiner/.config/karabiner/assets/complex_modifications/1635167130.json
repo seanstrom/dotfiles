@@ -1,0 +1,1 @@
+{"title":"","rules":[{"description":"","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["fn","left_control"]},"key_code":"equal_sign"},"to":[{"repeat":true}]}]}]}
