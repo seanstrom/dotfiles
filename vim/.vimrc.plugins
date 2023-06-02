@@ -59,8 +59,6 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
-"Plug 'nvim-lua/plenary.nvim'
-"Plug 'nvim-lua/popup.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 " Plug 'wfxr/minimap.vim'
 " Plug 'zah/nim.vim'
@@ -79,13 +77,18 @@ Plug 'editorconfig/editorconfig-vim'
 if has("nvim")
   " Plug 'famiu/feline.nvim'
   " Plug 'nathom/filetype.nvim'
+  Plug 'gfanto/fzf-lsp.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'LukasPietzschmann/telescope-tabs'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'windwp/windline.nvim'
   Plug 'Olical/aniseed'
-  Plug 'Olical/conjure' 
+  Plug 'Olical/conjure'
   Plug 'alaviss/nim.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'adelarsq/neofsharp.vim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
@@ -97,6 +100,7 @@ if has("nvim")
   Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
   Plug 'lukas-reineke/lsp-format.nvim'
   Plug 'snoe/clj-refactor.nvim'
+  Plug 'shaunsingh/solarized.nvim'
 endif
 
 call plug#end()
