@@ -137,7 +137,8 @@ imap <D-s> <ESC><D-s>a
 noremap <leader>ww <C-w>x
 noremap <C-w> :q<CR>
 noremap <leader>q :qa<CR>
-noremap <leader><TAB> :tabn<CR>
+noremap <A-TAB> :tabn<CR>
+noremap <A-S-TAB> :tabp<CR>
 inoremap <a-left> <c-left>
 inoremap <a-right> <c-right>
 inoremap <a-up> <c-up>
