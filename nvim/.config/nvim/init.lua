@@ -67,12 +67,13 @@ nvim_lsp["clojure_lsp"].setup({
 
 nvim_lsp.elmls.setup({ capabilities = capabilities, on_attach = nvim_format.on_attach })
 
--- Treesitter Setup
-
-local treesitter = require('nvim-treesitter.configs')
-treesitter.setup({
-    highlight = { enable = true },
-    indent = { enable = true },
-    ensure_installed = { "javascript", "elm", "clojure", "lua", "fennel", "python", "c_sharp", "rust", "cpp", "html", "css" }
-})
-
+if vim.g.vscode then
+    -- VSCode extension
+else
+  local treesitter = require('nvim-treesitter.configs')
+  treesitter.setup({
+      highlight = { enable = true },
+      indent = { enable = true },
+      ensure_installed = { "javascript", "elm", "clojure", "lua", "fennel", "python", "c_sharp", "rust", "cpp", "html", "css", "zig" }
+  })
+end
