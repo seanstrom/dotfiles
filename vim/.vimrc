@@ -112,6 +112,22 @@ nnoremap <leader><CR> :Buffers<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>f :Files<CR>
 
+if has("nvim")
+  " Telescope
+  " Find files using Telescope command-line sugar.
+  nnoremap <leader>ff <cmd>Telescope find_files<cr>
+  nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+  nnoremap <leader>fb <cmd>Telescope buffers<cr>
+  nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+  nnoremap <leader>fl <cmd>Telescope git_files show_untracked=true<cr>
+  nnoremap <leader>ft <cmd>Telescope treesitter<cr>
+  nnoremap <leader>ffs <cmd>Telescope lsp_document_symbols<cr>
+  nnoremap <leader>ffw <cmd>Telescope lsp_workspace_symbols<cr>
+  nnoremap <leader>ffd <cmd>Telescope lsp_definitions<cr>
+  nnoremap <leader>ffr <cmd>Telescope lsp_references<cr>
+  nnoremap <leader><TAB> :Telescope telescope-tabs list_tabs<CR>
+endif
+
 " Binding Ctr-s and Cmd-s to save files in normal mode and insert mode
 noremap <D-s> :w<CR>
 map <C-s> <D-s>
