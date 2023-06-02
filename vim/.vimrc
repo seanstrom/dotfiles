@@ -141,5 +141,6 @@ autocmd TermOpen * IndentLinesDisable
 autocmd TermOpen,BufWinEnter,BufEnter term://* startinsert
 
 au BufRead,BufNewFile *.mpp set filetype=cpp
+au! BufRead,BufNewFile *.cljd setfiletype clojure
 
 set cmdheight=1
