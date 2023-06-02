@@ -51,6 +51,10 @@ nvim_lsp.fsautocomplete.setup {
   cmd = { "dotnet", "fsautocomplete", "--background-service-enabled" },
 }
 
+nvim_lsp["zls"].setup({
+  capabilities = capabilities
+})
+
 nvim_lsp["clangd"].setup({
     capabilities = capabilities,
     cmd = {"clangd", "--compile-commands-dir=./"}
