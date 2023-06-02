@@ -56,13 +56,13 @@ nvim_lsp["zls"].setup({
 })
 
 nvim_lsp["clangd"].setup({
-    capabilities = capabilities,
-    cmd = {"clangd", "--compile-commands-dir=./"}
+  capabilities = capabilities,
+  cmd = {"clangd", "--compile-commands-dir=./"}
 })
 
 nvim_lsp["clojure_lsp"].setup({
-    capabilities = capabilities,
-    on_attach = nvim_format.on_attach
+  capabilities = capabilities,
+  on_attach = nvim_format.on_attach,
 })
 
 nvim_lsp.elmls.setup({ capabilities = capabilities, on_attach = nvim_format.on_attach })
