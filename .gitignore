@@ -7,3 +7,6 @@ fish/.config/fish/functions
 fish/.config/fish/fish_variables
 
 vim/.vim/plugged/
+
+wezterm/.config/wezterm/dist
+wezterm/.config/wezterm/wezterm.lua
