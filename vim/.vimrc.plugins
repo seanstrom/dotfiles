@@ -73,6 +73,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Direnv
 " Plug 'direnv/direnv.vim'
 
+Plug 'github/copilot.vim'
 
 if has("nvim")
   " Plug 'famiu/feline.nvim'
