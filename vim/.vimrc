@@ -107,10 +107,10 @@ let &fcs='eob: '
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 " Fuzzy Finder FZF
-nnoremap <leader>p :GFiles --cached --others --exclude-standard<CR>
-nnoremap <leader><CR> :Buffers<CR>
+" nnoremap <leader>p :GFiles --cached --others --exclude-standard<CR>
+" nnoremap <leader><CR> :Buffers<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>f :Files<CR>
+" nnoremap <leader>f :Files<CR>
 
 if has("nvim")
   " Telescope
@@ -120,11 +120,12 @@ if has("nvim")
   nnoremap <leader>fb <cmd>Telescope buffers<cr>
   nnoremap <leader>fh <cmd>Telescope help_tags<cr>
   nnoremap <leader>fl <cmd>Telescope git_files show_untracked=true<cr>
-  nnoremap <leader>ft <cmd>Telescope treesitter<cr>
-  nnoremap <leader>ffs <cmd>Telescope lsp_document_symbols<cr>
-  nnoremap <leader>ffw <cmd>Telescope lsp_workspace_symbols<cr>
-  nnoremap <leader>ffd <cmd>Telescope lsp_definitions<cr>
-  nnoremap <leader>ffr <cmd>Telescope lsp_references<cr>
+  nnoremap <leader>fx <cmd>Telescope treesitter<cr>
+  nnoremap <leader>ft <cmd>Telescope file_browser<cr>
+  nnoremap <leader>fd <cmd>Telescope lsp_document_symbols<cr>
+  nnoremap <leader>fw <cmd>Telescope lsp_workspace_symbols<cr>
+  nnoremap <leader>fd <cmd>Telescope lsp_definitions<cr>
+  nnoremap <leader>fr <cmd>Telescope lsp_references<cr>
   nnoremap <leader><TAB> :Telescope telescope-tabs list_tabs<CR>
 endif
 
@@ -137,12 +138,16 @@ imap <D-s> <ESC><D-s>a
 noremap <leader>ww <C-w>x
 noremap <C-w> :q<CR>
 noremap <leader>q :qa<CR>
-noremap <A-TAB> :tabn<CR>
-noremap <A-S-TAB> :tabp<CR>
 inoremap <a-left> <c-left>
 inoremap <a-right> <c-right>
 inoremap <a-up> <c-up>
 inoremap <a-down> <c-down>
+
+nnoremap <leader>tt g<Tab>
+nnoremap <leader>tl :tabn<CR>
+nnoremap <leader>te :tabn<CR>
+nnoremap <leader>th :tabp<CR>
+nnoremap <leader>tb :tabp<CR>
 
 
 " Allow Fennel code to run 
