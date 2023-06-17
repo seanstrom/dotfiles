@@ -9,3 +9,4 @@ packages:
     - nvim
     - karabiner
     - vscode
+    - wezterm
