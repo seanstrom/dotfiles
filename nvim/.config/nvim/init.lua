@@ -72,8 +72,15 @@ if vim.g.vscode then
 else
   local treesitter = require('nvim-treesitter.configs')
   treesitter.setup({
-      highlight = { enable = true },
-      indent = { enable = true },
-      ensure_installed = { "javascript", "elm", "clojure", "lua", "fennel", "python", "c_sharp", "rust", "cpp", "html", "css", "zig" }
+    highlight = {
+      enable = true,
+      -- additional_vim_regex_highlighting = true,
+      additional_vim_regex_highlighting = {'clojure'},
+    },
+    indent = { enable = true },
+    ensure_installed = {  "javascript", "elm", "clojure", "lua", "fennel", "python", "c_sharp", "rust", "cpp", "html", "css", "zig", "comment" },
+    matchup = {
+      enable = true,
+    },
   })
 end
