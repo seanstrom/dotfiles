@@ -24,6 +24,7 @@ if !exists("g:neovide")
   colorscheme gruvbox
   colorscheme palenight
   colorscheme catppuccin-macchiato
+  colorscheme habamax
   hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
 
 endif
