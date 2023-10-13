@@ -75,6 +75,8 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'github/copilot.vim'
 
+Plug 'andymass/vim-matchup'
+
 if has("nvim")
   " Plug 'famiu/feline.nvim'
   " Plug 'nathom/filetype.nvim'
