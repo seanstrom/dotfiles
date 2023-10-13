@@ -75,6 +75,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'github/copilot.vim'
 
+Plug 'preservim/nerdtree'
 Plug 'andymass/vim-matchup'
 
 if has("nvim")
