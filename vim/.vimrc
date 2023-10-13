@@ -122,7 +122,7 @@ if has("nvim")
   nnoremap <leader>fl <cmd>Telescope git_files show_untracked=true<cr>
   nnoremap <leader>fx <cmd>Telescope treesitter<cr>
   nnoremap <leader>ft <cmd>Telescope file_browser<cr>
-  nnoremap <leader>fd <cmd>Telescope lsp_document_symbols<cr>
+  nnoremap <leader>fs <cmd>Telescope lsp_document_symbols<cr>
   nnoremap <leader>fw <cmd>Telescope lsp_workspace_symbols<cr>
   nnoremap <leader>fd <cmd>Telescope lsp_definitions<cr>
   nnoremap <leader>fr <cmd>Telescope lsp_references<cr>
