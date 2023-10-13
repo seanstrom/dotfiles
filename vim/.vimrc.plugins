@@ -35,6 +35,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'habamax/vim-habaurora'
 Plug 'marko-cerovac/material.nvim'
+Plug 'ntk148v/komau.vim'
+Plug 'ishan9299/modus-theme-vim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " fuzzy finder
