@@ -1,5 +1,9 @@
 [user]
     name = Sean Hagstrom
     email = sean@seanhagstrom.com
+    [include]
+        path = "~/.config/git/public-keys/git-user-seanstrom"
 [github]
 	user = seanstrom
+[commit]
+    gpgsign = true
