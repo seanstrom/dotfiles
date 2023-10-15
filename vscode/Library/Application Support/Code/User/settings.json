@@ -28,4 +28,10 @@
     "editor.fontFamily": "'PragmataPro', 'Cascadia Code', Iosevka, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.neovimUseConfigFile": true,
+    "vim.enableNeovim": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
