@@ -1,7 +1,6 @@
 {
     "workbench.colorTheme": "gruvboxConcoctis dark medium",
     "materialTheme.fixIconsRunning": false,
-    "editor.fontFamily": "Iosevka, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontWeight": "400",
     "editor.rulers": [
         80,
@@ -26,4 +25,7 @@
     },
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": false
+    "editor.fontFamily": "'PragmataPro', 'Cascadia Code', Iosevka, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
 }
