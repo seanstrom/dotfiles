@@ -10,3 +10,5 @@ vim/.vim/plugged/
 
 wezterm/.config/wezterm/dist
 wezterm/.config/wezterm/wezterm.lua
+
+git/.config/git/public-keys
