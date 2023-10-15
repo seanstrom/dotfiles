@@ -7,14 +7,12 @@ set termguicolors
 " colorscheme palenight
 " colorscheme material
 " lua require('material.functions').change_style("palenight")
+" let macvim_skip_colorscheme=1
+" let g:material_style = 'palenight'
 
 if exists("g:neovide")
   colorscheme gruvbox
-  " set background=light
-  " colorscheme habarena
   set background=light
-  " colorscheme seoul256-light
-  "colorscheme solarized
   autocmd BufEnter * set title
   autocmd BufEnter * call timer_start(1, { tid -> execute('set notitle')})
 endif
@@ -26,15 +24,5 @@ if !exists("g:neovide")
   colorscheme catppuccin-macchiato
   colorscheme habamax
   hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
-
 endif
-
-let macvim_skip_colorscheme=1
-let g:material_style = 'palenight'
-
-
-" For dark tab color
-" hi TabLine      guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
-" hi TabLineSel   guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
-" hi TabLineFill  guifg=#999 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
 

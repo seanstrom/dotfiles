@@ -71,26 +71,41 @@ set ttyfast
 set autoread        " Read changes on a file when it is changed
 
 
-" Folding
-set foldmethod=syntax
-set foldlevel=99
-
-
 " Show Invisibles
 set list
 set listchars=tab:\ »
 
 
-" Theme Settings
-if filereadable(expand('~/.vimrc.theme'))
-  so ~/.vimrc.theme
-endif
+" Hide ~ for end of buffer character
+let &fcs='eob: '
 
 
-" Local Ovverides
-if filereadable(expand('~/.vimrc.local'))
-  so ~/.vimrc.local
-endif
+" Set height of command line
+set cmdheight=1
+
+
+" Allow Fennel code to run 
+let g:aniseed#env = v:true
+
+
+" Terminal Settings
+
+" Hide line numbers in terminal mode
+autocmd TermOpen * setlocal nonumber norelativenumber
+
+" Disable indent lines for terminal buffers
+autocmd TermOpen * IndentLinesDisable
+
+" enter insert mode whenever we're in a terminal
+autocmd TermOpen,BufWinEnter,BufEnter term://* startinsert
+
+
+" CPP settings
+au BufRead,BufNewFile *.mpp set filetype=cpp
+
+
+" Clojure settings
+" au! BufRead,BufNewFile *.clj* set iskeyword-=-
 
 
 " Minimap
@@ -101,18 +116,27 @@ let g:minimap_block_filetypes = ['startify', 'minimap', 'nofile']
 let g:minimap_close_filetypes = ['netrw', 'vim-plug']
 
 
-" Hide ~ for end of buffer character
-let &fcs='eob: '
+" Keybindings
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+" Remap leader keys to space
+" let g:mapleader = " "
+" let g:maplocalleader = " "
+let g:mapleader = "\<space>"
+let g:maplocalleader = "\<space>"
 
-" Fuzzy Finder FZF
-" nnoremap <leader>p :GFiles --cached --others --exclude-standard<CR>
-" nnoremap <leader><CR> :Buffers<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-" nnoremap <leader>f :Files<CR>
 
 if has("nvim")
+  " Disable vim-polyglot file and indentation detection for neovim treesitter
+  let g:polyglot_disabled = ['ftdetect', 'autoindent']
+
+
+  " Treesitter Folding
+  set foldmethod=expr
+  set foldexpr=nvim_treesitter#foldexpr()
+  set foldlevel=99
+
+
   " Telescope
   " Find files using Telescope command-line sugar.
   nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -127,6 +151,14 @@ if has("nvim")
   nnoremap <leader>fd <cmd>Telescope lsp_definitions<cr>
   nnoremap <leader>fr <cmd>Telescope lsp_references<cr>
   nnoremap <leader><TAB> :Telescope telescope-tabs list_tabs<CR>
+else
+  " Backup VIM keybindings
+ 
+  " Fuzzy Finder FZF
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+  " nnoremap <leader>p :GFiles --cached --others --exclude-standard<CR>
+  " nnoremap <leader><CR> :Buffers<CR>
+  " nnoremap <leader>f :Files<CR>
 endif
 
 " Binding Ctr-s and Cmd-s to save files in normal mode and insert mode
@@ -149,20 +181,23 @@ nnoremap <leader>te :tabn<CR>
 nnoremap <leader>th :tabp<CR>
 nnoremap <leader>tb :tabp<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+tnoremap <Esc> <C-\><C-n>
 
-" Allow Fennel code to run 
-let g:aniseed#env = v:true
+" Tmux Navigation
+nnoremap <silent> <C-h> <Cmd>TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> <Cmd>TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> <Cmd>TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> <Cmd>TmuxNavigateRight<CR>
 
-" Hide line numbers in terminal mode
-autocmd TermOpen * setlocal nonumber norelativenumber
+" Theme Settings
+if filereadable(expand('~/.vimrc.theme'))
+  so ~/.vimrc.theme
+endif
 
-" Disable indent lines for terminal buffers
-autocmd TermOpen * IndentLinesDisable
 
-" enter insert mode whenever we're in a terminal
-autocmd TermOpen,BufWinEnter,BufEnter term://* startinsert
-
-au BufRead,BufNewFile *.mpp set filetype=cpp
-au! BufRead,BufNewFile *.cljd setfiletype clojure
-
-set cmdheight=1
+" Local Ovverides
+if filereadable(expand('~/.vimrc.local'))
+  so ~/.vimrc.local
+endif

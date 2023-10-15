@@ -1,9 +1,12 @@
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
+if exists("g:vscode")
+  set rtp+=~/.vim/
+  call plug#begin('~/.vim/plugged')
+  Plug 'guns/vim-sexp'
+  Plug 'tpope/vim-sexp-mappings-for-regular-people'
+  call plug#end()
+endif
 
-tnoremap <Esc> <C-\><C-n>
-
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+" if filereadable(expand('~/.vimrc.plugins'))
+"   so ~/.vimrc.plugins
+" endif
 

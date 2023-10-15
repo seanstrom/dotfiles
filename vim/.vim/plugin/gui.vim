@@ -21,6 +21,7 @@ if (has('gui_macvim') || has('gui_running') || exists("g:neovide"))
 endif
 
 if exists("g:neovide")
+  set guifont=Iosevka_Nerd_Font_Mono
   let g:neovide_input_use_logo = 1
   let g:indentLine_setColors = 1
   let g:indentLine_color_gui = "#CECECE"
