@@ -6,4 +6,4 @@
 [github]
 	user = seanstrom
 [commit]
-    gpgsign = true
+   # gpgsign = true

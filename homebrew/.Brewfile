@@ -9,10 +9,10 @@
 
 tap "homebrew/bundle"
 tap "homebrew/core"
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
+# tap "homebrew/cask"
+# tap "homebrew/cask-versions"
+# tap "homebrew/cask-drivers"
+# tap "homebrew/cask-fonts"
 tap "homebrew/services"
 
 
@@ -20,7 +20,7 @@ tap "homebrew/services"
 # App Stores
 
 ## MacOS App Store
-brew "mas"
+#brew "mas"
 
 
 
@@ -66,16 +66,16 @@ brew "direnv"
 # Ruby Env
 
 ## Manage Ruby Versions
-brew "rbenv"
-brew "rbenv-bundler"
-brew "rbenv-default-gems"
+#brew "rbenv"
+#brew "rbenv-bundler"
+#brew "rbenv-default-gems"
 
 
 
 # Fonts
 
 ## Font for code
-cask "font-iosevka"
+# cask "font-iosevka"
 
 
 
@@ -85,7 +85,7 @@ cask "font-iosevka"
 brew "git"
 
 ## Git GUI
-cask "fork"
+#cask "fork"
 
 
 
@@ -101,7 +101,7 @@ cask "fork"
 # cask "calibre"
 
 ## Programming Documentation for Libraries
-cask "dash"
+#cask "dash"
 
 
 
@@ -117,7 +117,7 @@ brew "write-good"
 # cask "grammarly"
 
 ## Document Repository and Notebook
-cask "notion"
+#cask "notion"
 
 ## Zenmode writing app
 # mas "iA Writer", id: 775737590
@@ -131,7 +131,7 @@ cask "notion"
 # Containers
 
 ## Docker CLI
-brew "docker"
+#brew "docker"
 
 ## Docker GUI
 # cask "docker"
@@ -161,7 +161,7 @@ brew "wget"
 # cask "insomnia"
 
 ## VPN Client
-cask "nordvpn"
+#cask "nordvpn"
 # mas "NordVPN IKE", id: 1116599239
 
 ## FTP Client
@@ -173,8 +173,8 @@ cask "nordvpn"
 
 ## Terminal Client
 # cask "hyper"
-cask "iterm2"
-cask "kitty"
+#cask "iterm2"
+#cask "kitty"
 
 ## Terminal Shell
 brew "fish"
@@ -192,7 +192,7 @@ brew "reattach-to-user-namespace"
 
 ## F Sharp Runtime
 # brew "mono"
-cask "dotnet-sdk"
+#cask "dotnet-sdk"
 
 
 # Text Editors and IDEs
@@ -202,8 +202,8 @@ brew "neovim"
 # cask "vimr"
 # cask "atom"
 # cask "macvim"
-cask "visual-studio-code"
-cask "sublime-text"
+#cask "visual-studio-code"
+#cask "sublime-text"
 # mas "Xcode", id: 497799835
 
 # Install Emacs
@@ -216,8 +216,8 @@ cask "sublime-text"
 
 # Web Browsers
 
-cask "firefox"
-cask "google-chrome"
+#cask "firefox"
+#cask "google-chrome"
 # cask "min"
 
 
@@ -235,7 +235,7 @@ cask "google-chrome"
 # Window Management
 
 ## Tiling Windows
-cask "amethyst"
+#cask "amethyst"
 
 ## Hiding Windows
 # cask "hocus-focus"
@@ -259,7 +259,7 @@ cask "amethyst"
 # cask "elmedia-player"
 
 ## Music Players
-cask "spotify"
+#cask "spotify"
 
 
 
@@ -284,8 +284,8 @@ cask "spotify"
 # Design
 
 ## UI
-cask "figma"
-cask "sketch"
+#cask "figma"
+#cask "sketch"
 # mas "Gravit Designer", id: 1207744923
 
 ## UX
@@ -303,14 +303,14 @@ cask "sketch"
 # Messaging
 
 ## Chat
-cask "discord"
+#cask "discord"
 # cask "mattermost"
 # cask "rocket-chat"
 
 ### apps through cask or mas
 ### mas has auto updates
 
-cask "slack"
+#cask "slack"
 # mas "Slack", id: 803453959
 
 # cask "textual"
@@ -325,7 +325,7 @@ cask "slack"
 # Storage
 
 ## File Storage and Syncing
-cask "dropbox"
+#cask "dropbox"
 
 
 
@@ -341,22 +341,22 @@ cask "dropbox"
 # cask "lunchy"
 
 ## Turn off notifications when screen sharing
-cask "muzzle"
+#cask "muzzle"
 
 ## Manage menu bar apps
-cask "bartender"
+#cask "bartender"
 
 ## Keyboard customizatons
-cask "karabiner-elements"
+#cask "karabiner-elements"
 
 ## Mouse and Trackpad
-cask "middleclick"
+#cask "middleclick"
 
 ## Keep computer from falling asleep
-cask "keepingyouawake"
+#cask "keepingyouawake"
 
 ## Display info about computer
-cask "mactracker"
+#cask "mactracker"
 # mas "Mactracker", id: 430255202
 
 
@@ -382,7 +382,7 @@ cask "mactracker"
 # brew "haskell-stack"
 
 ## Node
-brew "yarn"
+#brew "yarn"
 
 ## Manage Language Versions
 brew "asdf"
@@ -391,7 +391,7 @@ brew "asdf"
 # Password Management
 
 # brew "1password-cli"
-cask "1password"
+#cask "1password"
 # mas "1Password 7", id: 1333542190
 
 
@@ -399,19 +399,19 @@ cask "1password"
 # Productivity
 
 ## Time Tracking
-cask "clockify"
+#cask "clockify"
 
 ## Pomodoro Timer
-mas "Focus Time Manager", id: 777233759
+#mas "Focus Time Manager", id: 777233759
 
 ## Todo Lists
-mas "Things 3", id: 904280696
+#mas "Things 3", id: 904280696
 
 ## Mind Mapping
-mas "MindNode 6", id: 1289197285
+#mas "MindNode 6", id: 1289197285
 
 ## App Launcher and Workflows
-cask "alfred"
+#cask "alfred"
 
 
 # Custom Cask - TODO: Create custom cask

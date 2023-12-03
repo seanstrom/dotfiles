@@ -19,10 +19,10 @@ endif
 
 if !exists("g:neovide")
   set background=dark
-  colorscheme gruvbox
+ " colorscheme gruvbox
   colorscheme palenight
-  colorscheme catppuccin-macchiato
-  colorscheme habamax
+  "colorscheme catppuccin-macchiato
+  "colorscheme habamax
   hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
 endif
 

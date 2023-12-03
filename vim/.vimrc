@@ -201,3 +201,5 @@ endif
 if filereadable(expand('~/.vimrc.local'))
   so ~/.vimrc.local
 endif
+
+au VimLeave * :!clear

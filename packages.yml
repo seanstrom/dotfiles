@@ -10,3 +10,12 @@ packages:
     - karabiner
     - vscode
     - wezterm
+  linux:
+    - homebrew
+    - git
+    - node
+    - tmux
+    - fish
+    - vim
+    - nvim
+    - starship

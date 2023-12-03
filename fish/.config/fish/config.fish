@@ -54,7 +54,7 @@ end
 # set -x DIRENV_LOG_FORMAT ""
 
 # For setting up rbenv
-status --is-interactive; and source (rbenv init -|psub)
+# status --is-interactive; and source (rbenv init -|psub)
 
 alias v="nvim"
 alias vim="nvim"
@@ -64,11 +64,12 @@ source /Users/seanhagstrom/.opam/opam-init/init.fish > /dev/null 2> /dev/null; o
 
 starship init fish | source
 
-any-nix-shell fish | source
+#any-nix-shell fish | source
 
 direnv hook fish | source
 
-source /usr/local/opt/asdf/libexec/asdf.fish
+# source /usr/local/opt/asdf/libexec/asdf.fish
+source /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.fish
 
 # Hide terminal title for Kitty Terminal
 if set -q KITTY_WINDOW_ID
