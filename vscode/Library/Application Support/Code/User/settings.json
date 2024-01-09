@@ -31,6 +31,7 @@
     "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.neovimUseConfigFile": true,
     "vim.enableNeovim": true,
+    "calva.keybindingsEnabled": false,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     }
