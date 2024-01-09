@@ -4,6 +4,12 @@ set shell=$SHELL
 set shell=sh
 
 
+if has("nvim")
+  " Disable vim-polyglot file and indentation detection for neovim treesitter
+  let g:polyglot_disabled = ['ftdetect', 'autoindent']
+endif
+
+
 " Load Plugins
 so ~/.vim/plugins.vim
 
@@ -127,10 +133,6 @@ let g:maplocalleader = "\<space>"
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 if has("nvim")
-  " Disable vim-polyglot file and indentation detection for neovim treesitter
-  let g:polyglot_disabled = ['ftdetect', 'autoindent']
-
-
   " Treesitter Folding
   set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
