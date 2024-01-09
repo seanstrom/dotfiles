@@ -2,12 +2,18 @@
 
 
 if vim.g.vscode then
-    -- VSCode extension
-    -- undo/REDO via vscode
-    vim.keymap.set("n","u","<Cmd>call VSCodeNotify('undo')<CR>")
-    vim.keymap.set("n","<C-r>","<Cmd>call VSCodeNotify('redo')<CR>") 
+  -- VSCode extension
+  -- undo/REDO via vscode
+  vim.keymap.set("n","u","<Cmd>call VSCodeNotify('undo')<CR>")
+  vim.keymap.set("n","<C-r>","<Cmd>call VSCodeNotify('redo')<CR>")
 
-    vim.cmd('source ~/.vimrc.local')
+  vim.g.mapleader = " "
+  vim.g.maplocalleader = " "
+  vim.keymap.set("n", "<leader>ee", "<Cmd>call VSCodeNotify('calva.evaluateSelection')<CR>")
+  vim.keymap.set("n", "<leader>e<esc>", "<Cmd>call VSCodeNotify('calva.clearInlineResults')<CR>")
+  vim.keymap.set("n", "<leader>ef", "<Cmd>call VSCodeNotify('calva.loadFile')<CR>")
+
+  vim.cmd('source ~/.vimrc.local')
 else
 
   vim.cmd('source ~/.config/nvim/vim/init.vim')
