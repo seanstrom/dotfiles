@@ -1,13 +1,26 @@
 {
-    "workbench.colorTheme": "gruvboxConcoctis dark medium",
-    "materialTheme.fixIconsRunning": false,
+    "editor.fontFamily": "Iosevka, 'PragmataPro', 'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
     "editor.fontWeight": "400",
+    "editor.minimap.enabled": false,
     "editor.rulers": [
         80,
         120
     ],
+    "files.associations": {
+        "fishfile": "ruby"
+    },
+    "files.insertFinalNewline": true,
+    "git.allowForcePush": true,
+    "git.path": "~/.local/bin/git",
+    "workbench.colorTheme": "gruvboxConcoctis light soft",
+    "workbench.activityBar.visible": false,
+    "materialTheme.fixIconsRunning": false,
     "workbench.sideBar.location": "left",
     "prettier.eslintIntegration": true,
+    "emmet.excludeLanguages": [],
+    "eslint.alwaysShowStatus": true,
     "jshint.enable": false,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -15,23 +28,14 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "eslint.alwaysShowStatus": true,
-    "files.associations": {
-        "fishfile": "ruby"
+    "[elm]": {
+        "editor.defaultFormatter": "elm-land.elm-land"
     },
-    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false
-    "editor.fontFamily": "'PragmataPro', 'Cascadia Code', Iosevka, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "vim.neovimPath": "/usr/local/bin/nvim",
-    "vim.neovimUseConfigFile": true,
-    "vim.enableNeovim": true,
     "calva.keybindingsEnabled": false,
+    "vscode-neovim.neovimExecutablePaths.darwin": "~/.local/bin/nvim",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     }
