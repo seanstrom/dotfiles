@@ -53,9 +53,6 @@ end
 # For silencing the direnv output
 # set -x DIRENV_LOG_FORMAT ""
 
-# For setting up rbenv
-status --is-interactive; and source (rbenv init -|psub)
-
 alias v="nvim"
 alias vim="nvim"
 
