@@ -6,4 +6,6 @@ then
 fi
 
 mkdir -p ~/.local/bin/
+ln -s $(brew --prefix)/bin/git ~/.local/bin/git
+ln -s $(brew --prefix)/bin/nvim ~/.local/bin/nvim
 ln -s $(brew --prefix)/bin/pinentry-mac ~/.local/bin/pinentry-mac
