@@ -2,18 +2,10 @@ call plug#begin('~/.vim/plugged')
 
 " language and file types
 Plug 'sheerun/vim-polyglot'
-Plug 'purescript-contrib/purescript-vim' 
-Plug 'wlangstroth/vim-racket'
-
-" console
-Plug 'Shougo/deol.nvim'
-
-" project
-Plug 'airblade/vim-rooter'
 
 " movement
-Plug 'rhysd/clever-f.vim'
-Plug 'easymotion/vim-easymotion'
+" Plug 'rhysd/clever-f.vim'
+" Plug 'easymotion/vim-easymotion'
 
 " bling
 Plug 'junegunn/goyo.vim'
@@ -37,7 +29,6 @@ Plug 'habamax/vim-habaurora'
 Plug 'marko-cerovac/material.nvim'
 Plug 'ntk148v/komau.vim'
 Plug 'ishan9299/modus-theme-vim'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -45,7 +36,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'yuki-ycino/fzf-preview.vim'
 
 " git
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " editing
 Plug 'sjl/gundo.vim'
@@ -55,22 +46,16 @@ Plug 'tpope/vim-fireplace'
 
 Plug 'tomtom/tcomment_vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-expand-region'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
-Plug 'lewis6991/gitsigns.nvim'
-" Plug 'wfxr/minimap.vim'
-" Plug 'zah/nim.vim'
-
 " default updatetime 4000ms is not good for async update
 set updatetime=100
 
 " formatting
-Plug 'editorconfig/editorconfig-vim'
-
+" Plug 'editorconfig/editorconfig-vim'
 
 " Direnv
 " Plug 'direnv/direnv.vim'
@@ -107,6 +92,8 @@ if has("nvim")
   Plug 'lukas-reineke/lsp-format.nvim'
   Plug 'snoe/clj-refactor.nvim'
   Plug 'shaunsingh/solarized.nvim'
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 endif
 
 call plug#end()
