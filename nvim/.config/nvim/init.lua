@@ -14,6 +14,7 @@ if vim.g.vscode then
   vim.keymap.set("n", "<leader>ef", "<Cmd>call VSCodeNotify('calva.loadFile')<CR>")
 
   vim.cmd('source ~/.vimrc.local')
+  vim.cmd('set clipboard+=unnamedplus')
 else
 
   vim.cmd('source ~/.config/nvim/vim/init.vim')
