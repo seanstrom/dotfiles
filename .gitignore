@@ -12,3 +12,6 @@ wezterm/.config/wezterm/dist
 wezterm/.config/wezterm/wezterm.lua
 
 git/.config/git/public-keys
+
+/vscode/Library/Application\ Support/Code/**/*
+!vscode/Library/Application\ Support/Code/Users/settings.json
