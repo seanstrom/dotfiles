@@ -44,7 +44,7 @@ source /Users/seanhagstrom/.opam/opam-init/init.fish > /dev/null 2> /dev/null; o
 
 starship init fish | source
 
-any-nix-shell fish | source
+# any-nix-shell fish | source
 
 direnv hook fish | source
 
