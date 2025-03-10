@@ -76,6 +76,7 @@ brew "rbenv-default-gems"
 
 ## Font for code
 cask "font-iosevka"
+cask "font-iosevka-nerd-font"
 
 
 
