@@ -7,3 +7,5 @@ fi
 
 ln -s $(brew --prefix)/bin/ ~/.local/bin
 ln -s $(brew --prefix)/opt ~/.local/opt
+
+ln -s $(brew --prefix)/bin/ /usr/local/bin
