@@ -9,46 +9,29 @@ if not test -e ~/.vim/autoload/plug.vim
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
-if not contains ~/bin $PATH
-  set PATH ~/bin $PATH
-end
+fish_add_path --prepend --global ~/bin
 
-if not contains ~/.local/bin $PATH
-  set PATH ~/.local/bin $PATH
-end
+fish_add_path --prepend --global ~/.local/bin
 
-if not contains ~/.npm-global/bin $PATH
-  set PATH ~/.npm-global/bin $PATH
-end
+fish_add_path --prepend --global ~/.npm-global/bin
 
-if not contains /usr/local/lib/ruby/gems/bin $PATH
-  set PATH /usr/local/lib/ruby/gems/bin $PATH
-end
+fish_add_path --prepend --global /usr/local/lib/ruby/gems/bin
 
-if not contains ~/.cabal/bin $PATH
-  set PATH ~/.cabal/bin $PATH
-end
+fish_add_path --prepend --global ~/.cabal/bin
 
 # GHCUP path variable
-if not contains ~/.ghcup/bin $PATH
-  set PATH ~/.ghcup/bin $PATH
-end
+fish_add_path --prepend --global ~/.ghcup/bin
 
-if not contains ~/Code/org-seanstrom/ponyo/bin $PATH
-  set PATH ~/Code/org-seanstrom/ponyo/bin $PATH
-end
+fish_add_path --prepend --global ~/Code/org-seanstrom/ponyo/bin
 
-if not contains ~/.dotnet/tools $PATH
-  set PATH ~/.dotnet/tools $PATH
-end
+fish_add_path --prepend --global ~/.dotnet/tools
 
-if not contains ~/.asdf/shims $PATH
-  set PATH ~/.asdf/shims $PATH
-end
+fish_add_path --prepend --global ~/.asdf/shims
 
-if not contains /usr/local/bin $PATH
-  set PATH /usr/local/bin $PATH
-end
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
+source ~/.asdf/plugins/java/set-java-home.fish
+
+fish_add_path --prepend --global $JAVA_HOME/bin
 
 # For silencing the direnv output
 # set -x DIRENV_LOG_FORMAT ""
@@ -64,8 +47,6 @@ starship init fish | source
 any-nix-shell fish | source
 
 direnv hook fish | source
-
-source /usr/local/opt/asdf/libexec/asdf.fish
 
 # Hide terminal title for Kitty Terminal
 if set -q KITTY_WINDOW_ID
