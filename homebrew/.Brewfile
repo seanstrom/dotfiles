@@ -417,6 +417,9 @@ mas "MindNode 6", id: 1289197285
 ## App Launcher and Workflows
 cask "alfred"
 
+cask "logi-options-plus"
+cask "betterdisplay"
+mas "Amphetamine", id: 937984704
 
 # Custom Cask - TODO: Create custom cask
 # https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
