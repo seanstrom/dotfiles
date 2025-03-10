@@ -395,6 +395,9 @@ brew "asdf"
 cask "1password"
 # mas "1Password 7", id: 1333542190
 
+brew "gpg"
+brew "gpg2"
+brew "pinentry-mac"
 
 
 # Productivity
