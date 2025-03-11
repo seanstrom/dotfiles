@@ -80,6 +80,17 @@ else
     on_attach = nvim_format.on_attach,
   })
 
+  nvim_lsp["biome"].setup({
+    capabilities = capabilities,
+    on_attach = nvim_format.on_attach
+  })
+
+  nvim_lsp['hls'].setup{
+    filetypes = { 'haskell', 'lhaskell', 'cabal' },
+  }
+
+  nvim_lsp.marksman.setup({})
+
   nvim_lsp.elmls.setup({ capabilities = capabilities, on_attach = nvim_format.on_attach })
 
   local treesitter = require('nvim-treesitter.configs')
