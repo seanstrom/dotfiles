@@ -1,7 +1,6 @@
 -- vim.cmd("let g:polyglot_disabled = ['ftdetect', 'autoindent']")
 
-
-if vim.g.vscode then
+local function setup_vscode_keybindings ()
   -- VSCode extension
   -- undo/REDO via vscode
   vim.keymap.set("n","u","<Cmd>call VSCodeNotify('undo')<CR>")
@@ -12,7 +11,11 @@ if vim.g.vscode then
   vim.keymap.set("n", "<leader>ee", "<Cmd>call VSCodeNotify('calva.evaluateSelection')<CR>")
   vim.keymap.set("n", "<leader>e<esc>", "<Cmd>call VSCodeNotify('calva.clearInlineResults')<CR>")
   vim.keymap.set("n", "<leader>ef", "<Cmd>call VSCodeNotify('calva.loadFile')<CR>")
+end
 
+
+if vim.g.vscode then
+  setup_vscode_keybindings()
   vim.cmd('source ~/.vimrc.local')
   vim.cmd('set clipboard+=unnamedplus')
 else
