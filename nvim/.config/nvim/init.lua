@@ -1,5 +1,41 @@
 -- vim.cmd("let g:polyglot_disabled = ['ftdetect', 'autoindent']")
 
+local function setup_autocomplete ()
+  vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+
+  local cmp = require 'cmp'
+
+  cmp.setup.cmdline(':', {
+    sources = {
+      { name = 'cmdline' }
+    }
+  })
+
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  cmp.setup {
+    sources = {
+      { name = 'nvim_lsp' },
+      { name = 'buffer' },
+      { name = 'path' },
+      { name = 'conjure' },
+    },
+    mapping = cmp.mapping.preset.insert({
+      ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i','c'}),
+      ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), {'i','c'}),
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    })
+  }
+end
+
 local function setup_vscode_keybindings ()
   -- VSCode extension
   -- undo/REDO via vscode
@@ -102,48 +138,11 @@ if vim.g.vscode then
   vim.cmd('source ~/.vimrc.local')
   vim.cmd('set clipboard+=unnamedplus')
 else
-
   vim.cmd('source ~/.config/nvim/vim/init.vim')
-
   require('gitsigns').setup()
-
-  vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-
-  local cmp = require 'cmp'
-
-  cmp.setup.cmdline(':', {
-    sources = {
-      { name = 'cmdline' }
-    }
-  })
-
-  cmp.setup.cmdline('/', {
-    sources = {
-      { name = 'buffer' }
-    }
-  })
-
-  cmp.setup {
-    sources = {
-      { name = 'nvim_lsp' },
-      { name = 'buffer' },
-      { name = 'path' },
-      { name = 'conjure' },
-    },
-    mapping = cmp.mapping.preset.insert({
-      ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i','c'}),
-      ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), {'i','c'}),
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    })
-  }
-
+  setup_autocomplete()
   setup_lsp_servers()
   setup_treesitter()
-
   require('catppuccin').setup({
     color_overrides = {
       all = {
