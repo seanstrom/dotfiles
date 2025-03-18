@@ -54,6 +54,48 @@ local function setup_treesitter ()
   })
 end
 
+local function setup_lsp_servers ()
+  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+  local nvim_lsp = require("lspconfig")
+  local nvim_format = require("lsp-format")
+
+  nvim_format.setup({}) 
+
+  nvim_lsp.fsautocomplete.setup {
+    capabilities = capabilities,
+    cmd = { "dotnet", "fsautocomplete", "--background-service-enabled" },
+  }
+
+  nvim_lsp["zls"].setup({
+    capabilities = capabilities
+  })
+
+  nvim_lsp["clangd"].setup({
+    capabilities = capabilities,
+    cmd = {"clangd", "--compile-commands-dir=./"}
+  })
+
+  nvim_lsp["clojure_lsp"].setup({
+    capabilities = capabilities,
+    on_attach = nvim_format.on_attach,
+  })
+
+  nvim_lsp["biome"].setup({
+    capabilities = capabilities,
+    on_attach = nvim_format.on_attach
+  })
+
+  nvim_lsp['hls'].setup{
+    filetypes = { 'haskell', 'lhaskell', 'cabal' },
+  }
+
+  nvim_lsp.marksman.setup({})
+
+  nvim_lsp.elmls.setup({
+    capabilities = capabilities,
+    on_attach = nvim_format.on_attach
+  })
+end
 
 if vim.g.vscode then
   setup_vscode_keybindings()
@@ -99,44 +141,7 @@ else
     })
   }
 
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  local nvim_lsp = require("lspconfig")
-  local nvim_format = require("lsp-format")
-
-  nvim_format.setup({}) 
-
-  nvim_lsp.fsautocomplete.setup {
-    capabilities = capabilities,
-    cmd = { "dotnet", "fsautocomplete", "--background-service-enabled" },
-  }
-
-  nvim_lsp["zls"].setup({
-    capabilities = capabilities
-  })
-
-  nvim_lsp["clangd"].setup({
-    capabilities = capabilities,
-    cmd = {"clangd", "--compile-commands-dir=./"}
-  })
-
-  nvim_lsp["clojure_lsp"].setup({
-    capabilities = capabilities,
-    on_attach = nvim_format.on_attach,
-  })
-
-  nvim_lsp["biome"].setup({
-    capabilities = capabilities,
-    on_attach = nvim_format.on_attach
-  })
-
-  nvim_lsp['hls'].setup{
-    filetypes = { 'haskell', 'lhaskell', 'cabal' },
-  }
-
-  nvim_lsp.marksman.setup({})
-
-  nvim_lsp.elmls.setup({ capabilities = capabilities, on_attach = nvim_format.on_attach })
-
+  setup_lsp_servers()
   setup_treesitter()
 
   require('catppuccin').setup({
