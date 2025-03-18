@@ -13,6 +13,47 @@ local function setup_vscode_keybindings ()
   vim.keymap.set("n", "<leader>ef", "<Cmd>call VSCodeNotify('calva.loadFile')<CR>")
 end
 
+local function setup_treesitter ()
+  local treesitter = require('nvim-treesitter.configs')
+  treesitter.setup({
+    highlight = {
+      enable = true,
+      -- additional_vim_regex_highlighting = true,
+      additional_vim_regex_highlighting = {'clojure'},
+    },
+    indent = { enable = true },
+    ensure_installed = {
+      "javascript",
+      "elm",
+      "clojure",
+      "lua",
+      "fennel",
+      "python",
+      "c_sharp",
+      "rust",
+      "cpp",
+      "html",
+      "css",
+      "zig",
+      "comment",
+      "haskell",
+      "nix",
+      "markdown",
+      "sql",
+      "go",
+      "gitattributes",
+      "bash",
+      "gitignore",
+      "git_config",
+      "yaml",
+      "dockerfile",
+    },
+    matchup = {
+      enable = true,
+    },
+  })
+end
+
 
 if vim.g.vscode then
   setup_vscode_keybindings()
@@ -96,44 +137,7 @@ else
 
   nvim_lsp.elmls.setup({ capabilities = capabilities, on_attach = nvim_format.on_attach })
 
-  local treesitter = require('nvim-treesitter.configs')
-  treesitter.setup({
-    highlight = {
-      enable = true,
-      -- additional_vim_regex_highlighting = true,
-      additional_vim_regex_highlighting = {'clojure'},
-    },
-    indent = { enable = true },
-    ensure_installed = {
-      "javascript",
-      "elm",
-      "clojure",
-      "lua",
-      "fennel",
-      "python",
-      "c_sharp",
-      "rust",
-      "cpp",
-      "html",
-      "css",
-      "zig",
-      "comment",
-      "haskell",
-      "nix",
-      "markdown",
-      "sql",
-      "go",
-      "gitattributes",
-      "bash",
-      "gitignore",
-      "git_config",
-      "yaml",
-      "dockerfile",
-    },
-    matchup = {
-      enable = true,
-    },
-  })
+  setup_treesitter()
 
   require('catppuccin').setup({
     color_overrides = {
