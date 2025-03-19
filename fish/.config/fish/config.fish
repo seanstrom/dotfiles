@@ -9,8 +9,10 @@ if not test -e ~/.vim/autoload/plug.vim
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
-fish_add_path --prepend --global ~/bin
+fish_add_path --prepend --global /opt/homebrew/sbin
+fish_add_path --prepend --global /opt/homebrew/bin
 
+fish_add_path --prepend --global ~/bin
 fish_add_path --prepend --global ~/.local/bin
 
 fish_add_path --prepend --global ~/.npm-global/bin
