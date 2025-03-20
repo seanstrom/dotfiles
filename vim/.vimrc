@@ -96,15 +96,17 @@ let g:aniseed#env = v:true
 
 " Terminal Settings
 
+" Determine whether we're using Neovim or Vim
+let s:term_open = has('nvim') ? "TermOpen" : "TerminalOpen"
+
 " Hide line numbers in terminal mode
-autocmd TermOpen * setlocal nonumber norelativenumber
+execute 'autocmd ' . s:term_open . ' * setlocal nonumber norelativenumber'
 
 " Disable indent lines for terminal buffers
-autocmd TermOpen * IndentLinesDisable
+execute 'autocmd ' . s:term_open . ' * IndentLinesDisable'
 
-" enter insert mode whenever we're in a terminal
-autocmd TermOpen,BufWinEnter,BufEnter term://* startinsert
-
+" Enter insert mode whenever we're in a terminal
+execute 'autocmd ' . s:term_open . ',BufWinEnter,BufEnter term://* startinsert'
 
 " CPP settings
 au BufRead,BufNewFile *.mpp set filetype=cpp
