@@ -94,6 +94,7 @@ if has("nvim")
   Plug 'shaunsingh/solarized.nvim'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+  Plug 'EdenEast/nightfox.nvim'
 endif
 
 call plug#end()
