@@ -1,3 +1,5 @@
+" vim: set ft=vim:
+
 if exists("g:vscode")
   set rtp+=~/.vim/
   call plug#begin('~/.vim/plugged')
