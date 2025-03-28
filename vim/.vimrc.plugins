@@ -1,17 +1,17 @@
 call plug#begin('~/.vim/plugged')
 
+" default updatetime 4000ms is not good for async update
+set updatetime=100
+
 " language and file types
 Plug 'sheerun/vim-polyglot'
-
-" movement
-" Plug 'rhysd/clever-f.vim'
-" Plug 'easymotion/vim-easymotion'
 
 " bling
 Plug 'junegunn/goyo.vim'
 Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/limelight.vim'
+Plug 'preservim/nerdtree'
 
 " tmux
 Plug 'edkolev/tmuxline.vim'
@@ -20,13 +20,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " themes
 Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
-Plug 'ayu-theme/ayu-vim'
-Plug 'hzchirs/vim-material'
 Plug 'junegunn/seoul256.vim'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'habamax/vim-habaurora'
-Plug 'marko-cerovac/material.nvim'
 Plug 'ntk148v/komau.vim'
 Plug 'ishan9299/modus-theme-vim'
 
@@ -35,39 +31,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'yuki-ycino/fzf-preview.vim'
 
-" git
-" Plug 'tpope/vim-fugitive'
-
 " editing
-Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-fireplace'
-
+Plug 'andymass/vim-matchup'
 Plug 'tomtom/tcomment_vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-expand-region'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
-" default updatetime 4000ms is not good for async update
-set updatetime=100
-
-" formatting
-" Plug 'editorconfig/editorconfig-vim'
-
-" Direnv
-" Plug 'direnv/direnv.vim'
-
+" autocomplete
 Plug 'github/copilot.vim'
 
-Plug 'preservim/nerdtree'
-Plug 'andymass/vim-matchup'
-
 if has("nvim")
-  " Plug 'famiu/feline.nvim'
-  " Plug 'nathom/filetype.nvim'
   Plug 'gfanto/fzf-lsp.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
