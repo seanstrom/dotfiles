@@ -156,4 +156,5 @@ else
       },
     },
   })
+  require("bootstrap")
 end
