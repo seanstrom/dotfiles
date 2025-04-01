@@ -90,10 +90,6 @@ let &fcs='eob: '
 set cmdheight=1
 
 
-" Allow Fennel code to run 
-let g:aniseed#env = v:true
-
-
 " Terminal Settings
 
 " Determine whether we're using Neovim or Vim
