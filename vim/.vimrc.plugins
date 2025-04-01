@@ -50,6 +50,7 @@ if has("nvim")
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'windwp/windline.nvim'
   Plug 'Olical/aniseed'
+  Plug 'Olical/nfnl'
   Plug 'Olical/conjure'
   Plug 'alaviss/nim.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
