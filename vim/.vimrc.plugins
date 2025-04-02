@@ -36,6 +36,8 @@ Plug 'andymass/vim-matchup'
 Plug 'tomtom/tcomment_vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 " autocomplete
 Plug 'github/copilot.vim'
