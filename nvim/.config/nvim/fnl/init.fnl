@@ -1,7 +1,9 @@
 (local cmp (require :cmp))
 
 (fn setup-autocomplete []
-  (set vim.opt.completeopt ["menu" "menuone" "noselect"])
+  (set vim.opt.completeopt ["menu"
+                            "menuone"
+                            "noselect"])
 
   (cmp.setup.cmdline ":" {:sources [{:name "cmdline"}]})
 
@@ -9,9 +11,9 @@
 
   (cmp.setup 
     {:sources [{:name "nvim_lsp"}
-                        {:name "buffer"}
-                        {:name "path"}
-                        {:name "conjure"}]
+               {:name "buffer"}
+               {:name "path"}
+               {:name "conjure"}]
      :mapping (cmp.mapping.preset.insert
                 {"<C-n>" (cmp.mapping (cmp.mapping.select_next_item) 
                                         ["i" "c"])
