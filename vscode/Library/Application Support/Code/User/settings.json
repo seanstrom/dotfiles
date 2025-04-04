@@ -14,7 +14,7 @@
     },
     "files.insertFinalNewline": true,
     "git.allowForcePush": true,
-    "git.path": "~/.local/bin/git",
+    "git.path": "/usr/local/bin/git",
     "workbench.colorTheme": "Anysphere Dark",
     "workbench.sideBar.location": "right",
     "workbench.activityBar.location": "hidden",
@@ -36,7 +36,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "calva.keybindingsEnabled": false,
-    "vscode-neovim.neovimExecutablePaths.darwin": "~/.local/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     }
