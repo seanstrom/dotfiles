@@ -27,17 +27,38 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[elm]": {
         "editor.defaultFormatter": "elm-land.elm-land"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "calva.keybindingsEnabled": false,
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    }
+    },
+    "[clojure]": {
+        "editor.defaultFormatter": "betterthantomorrow.calva"
+    },
+    "calva.prettyPrintingOptions": {
+        "printEngine": "pprint",
+        "enabled": false,
+        "width": 120,
+        "maxLength": 50
+    },
+    "calva.paredit.defaultKeyMap": "original",
+    "diffEditor.renderSideBySide": false,
+    "gruvboxConcoctis.useItalicFont": false,
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+    //   "--fast",
+      "-v",
+      "-Eexhaustive"
+    ],
+    "haskell.manageHLS": "PATH",
+    "haskell.plugin.hlint.config.flags": [],
+    "editor.accessibilitySupport": "off"
 }
