@@ -1,6 +1,5 @@
-(local cmp (require :cmp))
-
 (fn setup-autocomplete []
+  (local cmp (require :cmp))
   (set vim.opt.completeopt ["menu"
                             "menuone"
                             "noselect"])
