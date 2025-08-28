@@ -201,3 +201,7 @@ endif
 if filereadable(expand('~/.vimrc.local'))
   so ~/.vimrc.local
 endif
+
+autocmd BufEnter * if &filetype == 'startify' | set winbar= | else | set winbar=%#WinBar# | endif
+hi WinBar guibg=None
+hi WinBarNC guibg=None
