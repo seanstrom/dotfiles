@@ -1,7 +1,7 @@
 (local wezterm (require :wezterm))
 
-{:font_size 14.0
- :font (wezterm.font "Iosevka Term")
+{:font_size 16.0
+ :font (wezterm.font "Iosevka Nerd Font Mono")
  :enable_tab_bar false
  :enable_scroll_bar false
  :exit_behavior "Close"
