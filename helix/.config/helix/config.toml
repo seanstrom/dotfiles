@@ -1,4 +1,5 @@
-theme = "catppuccin_macchiato"
+# theme = "catppuccin_macchiato"
+theme = "gruvbox_mix_dark_medium"
 
 [editor]
 color-modes = false
