@@ -1,4 +1,4 @@
--- [nfnl] Compiled from bootstrap.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] bootstrap.fnl
 local nfnl = require("nfnl.api")
 local config_dir = vim.fn.stdpath("config")
 local bootstrap_sentinel_file_path = (config_dir .. "/lua/sentinel.lua")
