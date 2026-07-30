@@ -40,7 +40,7 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 " autocomplete
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 if has("nvim")
   Plug 'gfanto/fzf-lsp.nvim'
