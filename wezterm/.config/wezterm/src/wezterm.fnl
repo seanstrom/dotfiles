@@ -13,7 +13,9 @@
                   :bottom 15}
  :enable_csi_u_key_encoding true
  :adjust_window_size_when_changing_font_size false
- :color_scheme "Gruvbox light, soft (base16)"
+;  :color_scheme "Gruvbox light, medium (base16)"
+;  :color_scheme "Gruvbox dark, soft (base16)"
+ :color_scheme "Gruvbox dark, hard (base16)"
  :keys [{:key "s"
          :mods "SUPER"
          :action (wezterm.action.SendKey {:key "s"

@@ -24,12 +24,13 @@ if !exists("g:neovide")
   " colorscheme gruvbox
   " colorscheme palenight
   " colorscheme catppuccin-macchiato
-  colorscheme habamax
+  " colorscheme habamax
   " set background=light
-  " colorscheme gruvbox
+  set background=dark
+  " colorscheme carbonfox
+  colorscheme gruvbox
   " colorscheme material-palenight
   if has("nvim")
     hi StatusLine guibg=synIDattr(hlID("Normal"), "bg")
   endif
 endif
-
