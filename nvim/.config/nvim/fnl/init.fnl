@@ -43,8 +43,11 @@
      :highlight {:enable true
                 :additional_vim_regex_highlighting ["clojure"]}
      :ensure_installed ["javascript"
+                        "typescript"
                         "elm"
+                        "gren"
                         "clojure"
+                        "nim"
                         "lua"
                         "fennel"
                         "python"
@@ -65,6 +68,7 @@
                         "gitignore"
                         "git_config"
                         "yaml"
+                        "roc"
                         "dockerfile"]}))
 
 (fn setup-lsp-servers []
