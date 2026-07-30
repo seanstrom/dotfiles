@@ -36,7 +36,7 @@
   (vim.keymap.set "n" "<leader>ef" "<Cmd>call VSCodeNotify('calva.loadFile')<CR>"))
 
 (fn setup-treesitter []
-  (local tree-sitter (require :nvim-treesitter.configs))
+  (local tree-sitter (require :nvim-treesitter.config))
   (tree-sitter.setup 
     {:indent {:enable true}
      :matchup {:enable true}
@@ -74,30 +74,41 @@
 (fn setup-lsp-servers []
   (local cmp-lsp (require :cmp_nvim_lsp))
   (local capabilities (cmp-lsp.default_capabilities))
-  (local nvim-lsp (require :lspconfig))
+  (local nvim-lsp vim.lsp.config)
   (local nvim-format (require :lsp-format))
 
   (nvim-format.setup {})
-  (nvim-lsp.fsautocomplete.setup 
-    {:capabilities capabilities
-     :cmd ["dotnet" "fsautocomplete" "--background-service-enabled"]})
-  (nvim-lsp.zls.setup
-    {:capabilities capabilities})
-  (nvim-lsp.clangd.setup
-    {:capabilities capabilities
-     :cmd ["clangd" "--compile-commands-dir=./"]})
-  (nvim-lsp.clojure_lsp.setup
-    {:capabilities capabilities
-     :on_attach nvim-format.on_attach})
-  (nvim-lsp.biome.setup
-    {:capabilities capabilities
-     :on_attach nvim-format.on_attach})
-  (nvim-lsp.hls.setup
-    {:filetypes ["haskell" "lhashell" "cabal"]})
-  (nvim-lsp.marksman.setup {})
-  (nvim-lsp.elmls.setup
-    {:capabilities capabilities
-     :on_attach nvim-format.on_attach}))
+  (nvim-lsp :fsautocomplete
+            {:capabilities capabilities
+             :cmd ["dotnet" "fsautocomplete" "--background-service-enabled"]})
+  (nvim-lsp :zls
+            {:capabilities capabilities})
+  (nvim-lsp :clangd
+            {:capabilities capabilities
+             :cmd ["clangd" "--compile-commands-dir=./"]})
+  (nvim-lsp :clojure_lsp
+            {:capabilities capabilities
+             :on_attach nvim-format.on_attach})
+  (nvim-lsp :biome
+            {:capabilities capabilities
+             :on_attach nvim-format.on_attach})
+  (nvim-lsp :hls
+            {:filetypes ["haskell" "lhashell" "cabal"]})
+  (nvim-lsp :marksman {})
+  (vim.lsp.enable :vtsls)
+  (nvim-lsp :elmls
+            {:capabilities capabilities
+             :on_attach nvim-format.on_attach})
+  (nvim-lsp :rust_analyzer
+            {:capabilities capabilities
+             :on_attach nvim-format.on_attach})
+  (nvim-lsp :nim_langserver
+            {:capabilities capabilities
+             :on_attach nvim-format.on_attach})
+  ; (nvim-lsp :nimls
+  ;           {:capabilities capabilities
+  ;            :on_attach nvim-format.on_attach})
+  )
 
 (fn setup-themes []
   (local catppuccin (require :catppuccin))
