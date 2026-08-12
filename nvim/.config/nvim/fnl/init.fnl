@@ -36,7 +36,7 @@
   (vim.keymap.set "n" "<leader>ef" "<Cmd>call VSCodeNotify('calva.loadFile')<CR>"))
 
 (fn setup-treesitter []
-  (local tree-sitter (require :nvim-treesitter.config))
+  (local tree-sitter (require :nvim-treesitter.configs))
   (tree-sitter.setup 
     {:indent {:enable true}
      :matchup {:enable true}
